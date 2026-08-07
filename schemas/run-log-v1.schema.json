@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aidev235/HANews/schemas/run-log-v1.schema.json",
+  "title": "HANews structured run log v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "project",
+    "started_at",
+    "finished_at",
+    "timezone",
+    "reporting_window",
+    "trigger",
+    "models",
+    "sources",
+    "statistics",
+    "outputs",
+    "validation",
+    "warnings",
+    "errors",
+    "git",
+    "status"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "run_id": { "type": "string" },
+    "project": { "const": "HANews" },
+    "started_at": { "type": "string" },
+    "finished_at": { "type": ["string", "null"] },
+    "timezone": { "type": "string" },
+    "stage": { "type": "string" },
+    "reporting_window": {
+      "type": "object",
+      "required": ["start", "end", "iso_year", "iso_week"],
+      "properties": {
+        "start": { "type": "string" },
+        "end": { "type": "string" },
+        "iso_year": { "type": "integer" },
+        "iso_week": { "type": "integer", "minimum": 1, "maximum": 53 }
+      },
+      "additionalProperties": false
+    },
+    "trigger": { "type": "object" },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["task", "provider", "requested_model", "actual_model", "configuration"],
+        "properties": {
+          "task": { "type": "string" },
+          "provider": { "type": "string" },
+          "requested_model": { "type": "string" },
+          "actual_model": { "type": "string" },
+          "fallback_reason": { "type": ["string", "null"] },
+          "configuration": { "type": "object" },
+          "calls": { "type": "integer" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "sources": { "type": "array", "items": { "type": "object" } },
+    "statistics": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "outputs": { "type": "object", "additionalProperties": { "type": "string" } },
+    "validation": {
+      "type": "object",
+      "required": ["status", "checks"],
+      "properties": {
+        "status": { "enum": ["pending", "success", "failed"] },
+        "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+        "errors": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage", "type", "message"],
+        "properties": {
+          "stage": { "type": "string" },
+          "type": { "type": "string" },
+          "message": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "git": {
+      "type": "object",
+      "required": [
+        "commit_attempted",
+        "commit_success",
+        "commit_hash",
+        "push_attempted",
+        "push_success"
+      ],
+      "properties": {
+        "commit_attempted": { "type": "boolean" },
+        "commit_success": { "type": "boolean" },
+        "commit_hash": { "type": ["string", "null"] },
+        "commit_message": { "type": ["string", "null"] },
+        "push_attempted": { "type": "boolean" },
+        "push_success": { "type": "boolean" },
+        "remote": { "type": ["string", "null"] },
+        "branch": { "type": ["string", "null"] },
+        "metadata_commit": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "files_created": { "type": "array", "items": { "type": "string" } },
+    "files_modified": { "type": "array", "items": { "type": "string" } },
+    "status": { "enum": ["running", "success", "failed"] }
+  },
+  "additionalProperties": false
+}
+

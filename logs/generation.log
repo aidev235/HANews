@@ -1,0 +1,3 @@
+# HANews append-only generation history
+# Each run appends a START block, a FINAL block, and—when enabled—a GIT RESULT block.
+

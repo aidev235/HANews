@@ -1,0 +1,39 @@
+project:
+  name: HANews
+  timezone: America/Chicago
+
+report:
+  harmonic_analysis_count: 20
+  harmonic_analysis_briefing_count: 5
+  general_math_count: 8
+  general_math_briefing_count: 3
+  minimum_ha_relevance: 0.55
+  minimum_general_importance: 0.45
+
+archive:
+  directory: archive
+  naming: "{year}Week{week:02d}"
+  preserve_changed_revisions: true
+
+logging:
+  human_log: logs/generation.log
+  structured_log_dir: logs/runs
+  schema_version: 1
+
+storage:
+  items_file: data/items/items.jsonl
+  state_file: data/state/last-run.json
+
+network:
+  timeout_seconds: 30
+  max_attempts: 3
+  user_agent: "HANews/0.1 (+https://github.com/aidev235/HANews)"
+
+git:
+  auto_commit: true
+  auto_push: true
+  remote: origin
+  branch: main
+  report_commit_template: "report: generate HANews {year} Week {week:02d}"
+  metadata_commit_template: "meta: finalize HANews run {run_id}"
+

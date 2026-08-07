@@ -1,0 +1,18 @@
+sources:
+  - name: arxiv
+    enabled: true
+    collector: arxiv
+    base_url: https://export.arxiv.org/api/query
+    reliability: 0.95
+    max_results: 300
+    categories:
+      - math.CA
+      - math.AP
+      - math.MG
+      - math.FA
+      - math.DG
+      - math.CO
+      - math.PR
+      - math.SP
+      - math.NT
+
