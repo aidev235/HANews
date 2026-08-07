@@ -1,0 +1,23 @@
+name: weekly
+on:
+  schedule: [{cron: "17 6 * * 1"}]
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: hanews-weekly, cancel-in-progress: false}
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    env: {TZ: UTC, OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"}
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-python@v5.6.0
+        with: {python-version: "3.12", cache: pip, cache-dependency-path: requirements.lock}
+      - run: pip install -r requirements.lock
+      - run: ruff check . && pytest -q
+      - run: hanews --trigger schedule
+      - name: Preserve failed logs
+        if: failure()
+        uses: actions/upload-artifact@v4.6.2
+        with: {name: failed-run-logs, path: logs/, if-no-files-found: error}
+      - name: Authenticated push
+        run: git push

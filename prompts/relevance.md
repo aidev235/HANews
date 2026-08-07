@@ -1,0 +1,1 @@
+Return the relevance schema only. Distinguish direct harmonic analysis, strong adjacency, superficial keyword overlap, and unrelated work. Label sourced evidence, interpretation, and uncertainty separately. Never supply metadata.

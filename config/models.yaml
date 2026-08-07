@@ -1,0 +1,5 @@
+# Provider/model per task; fallback is optional and its use must be logged.
+classifier: {provider: openai, model: gpt-5-mini, fallback: null}
+importance: {provider: openai, model: gpt-5, fallback: gpt-5-mini}
+summarization: {provider: openai, model: gpt-5-mini, fallback: null}
+translation: {provider: openai, model: gpt-5-mini, fallback: null}

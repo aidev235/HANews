@@ -1,0 +1,7 @@
+# Auditable convex component weights and pre-quota selection floors.
+ha:
+  weights: {topical_relevance: 0.30, significance: 0.25, novelty: 0.20, breadth: 0.15, source_confidence: 0.10}
+  minimum_score: 0.65
+general:
+  weights: {topical_relevance: 0.15, significance: 0.30, novelty: 0.25, breadth: 0.20, source_confidence: 0.10}
+  minimum_score: 0.72

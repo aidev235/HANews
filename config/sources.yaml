@@ -1,0 +1,7 @@
+collectors:
+  arxiv:
+    enabled: true
+    categories: [math.CA, math.FA, math.AP]
+    timeout_seconds: 20
+    retries: 2
+    query: {max_results: 200, sort_by: submittedDate}

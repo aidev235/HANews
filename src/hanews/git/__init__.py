@@ -1,0 +1,1 @@
+"""Restricted Git publication operations."""
