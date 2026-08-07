@@ -8,12 +8,15 @@ Codex performs the research and updates the repository by following [`Prompt.md`
 
 Open this repository in Codex and ask:
 
-> Read `Prompt.md` and generate this week's HANews report. Complete the research, validation,
-> logging, archival, and Git steps described there.
+```text
+Read `Prompt.md` and generate this week's HANews report. Model: CodeX-GPT5.6-sol-ultra-fast
+```
 
 For a backfill, add an ISO week or explicit date range:
 
-> Read `Prompt.md` and generate HANews for 2026-W36.
+```text
+Read `Prompt.md` and generate HANews for 2026-W36.
+```
 
 Codex will search current authoritative sources, choose only sufficiently important items,
 write the English and Chinese reports, preserve the weekly archive, create both required log
