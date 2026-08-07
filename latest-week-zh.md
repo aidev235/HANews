@@ -1,5 +1,4 @@
 # HANews 周报
 
-尚未生成周报。第一次成功执行 `hanews generate` 后，本占位文件将被原子替换，并创建对应的
-ISO 周归档。
+尚未生成周报。请让 Codex 阅读 `Prompt.md`，并为最近一个完整的 ISO 周生成报告。
 

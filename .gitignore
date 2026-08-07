@@ -1,17 +1,4 @@
-__pycache__/
-*.py[cod]
-*.egg-info/
-.pytest_cache/
-.ruff_cache/
-.mypy_cache/
-.venv/
-venv/
-.env
-dist/
-build/
+.DS_Store
 *.tmp
 *.swp
-
-# Runtime recovery files that should be inspected before committing.
-*.failed-push
 
