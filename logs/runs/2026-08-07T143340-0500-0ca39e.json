@@ -5,6 +5,7 @@
   "started_at": "2026-08-07T14:33:40-0500",
   "finished_at": "2026-08-07T15:04:03-0500",
   "duration_seconds": 1823,
+  "published_at": "2026-08-07T15:07:23-0500",
   "timezone": "America/Chicago",
   "trigger": "manual",
   "reporting_window": {
@@ -692,7 +693,7 @@
     "The ICM Fields Medal event occurred July 23, outside the reporting window, and was excluded; no in-window event source displaced a stronger selected research item.",
     "The first sandboxed network lookup failed DNS resolution; the authorized network retry succeeded.",
     "A pre-existing README.md modification was left untouched and excluded from staging.",
-    "The report push outcome is pending at log finalization; an append-only publication record and structured-log update will record the actual result after the push attempt."
+    "The report push was necessarily pending at content-log finalization; the append-only PUBLISH record and git object below record its subsequent success."
   ],
   "errors": [],
   "git": {
@@ -705,10 +706,14 @@
       "behind": 0
     },
     "commit_message": "report: generate HANews 2026 Week 31 [run:2026-08-07T143340-0500-0ca39e]",
-    "report_commit": null,
+    "report_commit": "070cfe1f4b0ad0b0dbbbc6a40dfa609a1e885ff2",
     "push": {
-      "status": "pending",
-      "outcome": "not_attempted_at_log_finalization"
+      "status": "success",
+      "attempted_at": "2026-08-07T15:07:23-0500",
+      "outcome": "origin/main advanced from 13e032f14ae90d6c2419811e49a3996e74a4c75b to 070cfe1f4b0ad0b0dbbbc6a40dfa609a1e885ff2",
+      "remote_before": "13e032f14ae90d6c2419811e49a3996e74a4c75b",
+      "remote_after": "070cfe1f4b0ad0b0dbbbc6a40dfa609a1e885ff2",
+      "verified_head_matches_remote": true
     }
   },
   "status": "success"
