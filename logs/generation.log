@@ -1,0 +1,3 @@
+# HANews append-only generation history
+# Every run appends a START record and a FINAL record. Do not overwrite this file.
+
