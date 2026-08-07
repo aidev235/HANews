@@ -1,0 +1,5 @@
+# Direct harmonic-analysis vocabulary and strongly related areas.
+vocabulary: [harmonic analysis, Fourier, singular integral, restriction, decoupling, wavelet]
+adjacent: [PDE, geometric measure theory, additive combinatorics, functional analysis]
+# Deterministic/structured classifier confidence cutoffs.
+thresholds: {direct: 0.75, adjacent: 0.65}

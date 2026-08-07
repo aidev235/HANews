@@ -1,0 +1,11 @@
+.env
+*.pem
+credentials*
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+.*.tmp
+logs/receipts/
+data/items.jsonl

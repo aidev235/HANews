@@ -1,0 +1,10 @@
+# IANA timezone used for all windows and logs.
+timezone: UTC
+# Maximum significant entries; limits never cause padding.
+report_limits: {ha: 5, general: 3}
+# ISO archive filename template and collision opt-in.
+archive: {pattern: "{iso_year}-W{iso_week:02d}.md", safe_update: false}
+# Durable dual-log locations.
+logging: {generation: logs/generation.log, runs: logs/runs}
+# Publication policy and generated-only staging.
+git: {commit: true, push: true, fail_on_push: true}
