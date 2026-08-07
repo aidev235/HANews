@@ -8,6 +8,11 @@ the changes to Git. Do not build a crawler, application, API client, or schedule
 
 - Use `America/Chicago` for timestamps.
 - Unless the request names a period, cover the most recently completed ISO week (Monday–Sunday).
+- Read the model identifier from the final `Model: <identifier>` field in the invoking request. Trim
+  surrounding whitespace, preserve the identifier exactly, and use it consistently in the report
+  and both logs. Do not replace a supplied identifier with `unavailable` merely because runtime
+  metadata does not expose the model name. If the field is absent or empty, use `unavailable` and
+  add a warning to both logs.
 - Never invent facts, links, dates, model IDs, or mathematical claims. Never record secrets.
 
 Update only these report artifacts:
@@ -26,8 +31,8 @@ logs/runs/<run_id>.json        Structured run log
 1. Inspect the current reports, archive, and logs.
 2. Create a collision-safe `run_id`, such as `2026-08-10T081500-0500-a83f2c`.
 3. Immediately append a START entry to `logs/generation.log` and create the JSON log with status
-   `running`, schema version 1, the reporting window, start time, timezone, trigger, and available
-   model information.
+   `running`, schema version 1, the reporting window, start time, timezone, trigger, and model
+   identifier from the invoking request.
 4. If anything fails, finalize both logs with the failed stage and partial results before stopping.
 
 ## 2. Research and select
@@ -71,7 +76,7 @@ Write `latest-week.md` in this form:
 ## YYYY-MM-DD — YYYY-MM-DD
 
 Generated: YYYY-MM-DD HH:MM TZ
-Model: <actual model identifier, or unavailable>
+Model: <model identifier from the invoking request, or unavailable>
 
 ## Harmonic Analysis — Top 20
 
@@ -92,11 +97,13 @@ Model: <actual model identifier, or unavailable>
 ## 1. Title
 ```
 
-The two opening indexes contain only ranked, linked titles. Brief at most the top 5 HA items and
-top 3 general-mathematics items. Each briefing normally contains authors, source, topics, a concise
-account of what happened, why it matters, and supported connections. Write for research
-mathematicians. Separate source facts from interpretation, label speculation, preserve uncertainty,
-and say when the available evidence is too thin to assess significance.
+The two opening indexes contain only ranked, linked titles. Bold the entire linked title of every
+item that has a briefing, using `**[Title](primary-source-url)**`; leave links without briefings
+unbolded. Brief at most the top 5 HA items and top 3 general-mathematics items. Each briefing
+normally contains authors, source, topics, a concise account of what happened, why it matters, and
+supported connections. Write for research mathematicians. Separate source facts from
+interpretation, label speculation, preserve uncertainty, and say when the available evidence is
+too thin to assess significance.
 
 ## 4. Translate and archive
 
@@ -114,7 +121,8 @@ the same archive files; Git history preserves earlier revisions.
 Append a FINAL entry to `logs/generation.log` containing:
 
 - run ID, timing, window, final status, and any failed stage;
-- requested and actual model identifiers (`unavailable` if not exposed);
+- the model identifier supplied in the invoking request (`unavailable` if absent or empty), plus
+  any separately exposed runtime model identifier;
 - sources queried and their successes or failures;
 - raw, normalized, deduplicated, HA-relevant, and general candidate counts;
 - selected and briefing counts, output and validation status;
@@ -151,6 +159,7 @@ Before publication, confirm:
 - selected events are in the reporting window and links are valid;
 - selection limits are 20/8 and briefing limits are 5/3;
 - briefing items occur in their indexes in the same order;
+- index links for briefing items are bold, and all other index links are unbolded;
 - English and Chinese selections, links, claims, and uncertainty match;
 - archive names match the ISO week;
 - both logs are complete, the JSON is valid, and no secrets are present.
