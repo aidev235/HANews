@@ -1,0 +1,715 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-07T143340-0500-0ca39e",
+  "project": "HANews",
+  "started_at": "2026-08-07T14:33:40-0500",
+  "finished_at": "2026-08-07T15:04:03-0500",
+  "duration_seconds": 1823,
+  "timezone": "America/Chicago",
+  "trigger": "manual",
+  "reporting_window": {
+    "start": "2026-07-27",
+    "end": "2026-08-02",
+    "iso_year": 2026,
+    "iso_week": 31
+  },
+  "models": [
+    {
+      "requested": "unavailable",
+      "actual": "unavailable",
+      "note": "The runtime did not expose an exact model identifier."
+    }
+  ],
+  "sources": [
+    {
+      "name": "arXiv API",
+      "kind": "official_preprint_api",
+      "url": "https://export.arxiv.org/api/query",
+      "query_url": "https://arxiv.org/api/query?search_query=submittedDate:%22202607270000+TO+202608022359%22+AND+cat:math.*&start=0&max_results=2000&id_list=",
+      "queries": [
+        "all mathematics submissions dated 2026-07-27 through 2026-08-02",
+        "harmonic-analysis category sweep over math.CA, math.AP, math.FA, math.SP, and math.MG",
+        "selected-record identifier and version verification"
+      ],
+      "status": "success",
+      "records_returned": {
+        "all_math": 1481,
+        "ha_category_mentions": 528,
+        "selected_exact_id_validation": 26
+      },
+      "retrieved_at": "2026-08-07T14:56:39-0500"
+    },
+    {
+      "name": "arXiv OAI-PMH",
+      "kind": "official_preprint_metadata",
+      "url": "https://export.arxiv.org/oai2",
+      "queries": [
+        "math.CA, math.AP, math.FA, math.SP, and math.MG datestamps in the reporting window",
+        "version-history checks for substantially revised preprints"
+      ],
+      "status": "success",
+      "unique_records": 526,
+      "retrieved_at": "2026-08-07T14:41:00-0500"
+    },
+    {
+      "name": "Crossref Works API broad normalization sample",
+      "kind": "authoritative_doi_metadata",
+      "url": "https://api.crossref.org/works",
+      "queries": [
+        "broad mathematics discovery query for records dated 2026-07-27 through 2026-08-02"
+      ],
+      "status": "success",
+      "total_matches": 6401,
+      "records_reviewed": 100,
+      "retrieved_at": "2026-08-07T14:42:00-0500"
+    },
+    {
+      "name": "Crossref Works API journal-publication sweep",
+      "kind": "authoritative_doi_metadata",
+      "url": "https://api.crossref.org/works?filter=from-online-pub-date:2026-07-27,until-online-pub-date:2026-08-02,type:journal-article&rows=1000&select=DOI,title,author,container-title,published-online,URL",
+      "status": "success",
+      "total_matches": 95480,
+      "records_returned": 1000,
+      "selected_records": 0,
+      "note": "The result set was extremely noisy and was not added to the normalized 1,581-record candidate pool.",
+      "retrieved_at": "2026-08-07T14:56:00-0500"
+    },
+    {
+      "name": "OpenAlex mathematics concept sweep",
+      "kind": "secondary_bibliographic_discovery",
+      "url": "https://api.openalex.org/works?filter=concepts.id:C33923547,from_publication_date:2026-07-27,to_publication_date:2026-08-02&per_page=200",
+      "status": "success",
+      "total_matches": 29953,
+      "records_returned": 200,
+      "note": "Noisy discovery-only result set; selected claims were verified against primary sources.",
+      "retrieved_at": "2026-08-07T14:56:00-0500"
+    },
+    {
+      "name": "OpenAlex physical-sciences article sweep",
+      "kind": "secondary_bibliographic_discovery",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2026-07-27,primary_topic.domain.id:3,to_publication_date:2026-08-02,type:article&per_page=200",
+      "status": "success",
+      "total_matches": 46214,
+      "records_returned": 200,
+      "selected_records": 1,
+      "note": "Discovered OpenAlex W4403662161; publication metadata was then verified at SpringerLink and the DOI resolver.",
+      "retrieved_at": "2026-08-07T14:56:00-0500"
+    },
+    {
+      "name": "SpringerLink / Journal of Fourier Analysis and Applications",
+      "kind": "publisher_version_of_record",
+      "url": "https://link.springer.com/article/10.1007/s00041-026-10283-x",
+      "status": "success",
+      "selected_records": 1,
+      "retrieved_at": "2026-08-07T14:42:00-0500"
+    },
+    {
+      "name": "SpringerLink / Inventiones mathematicae",
+      "kind": "publisher_version_of_record",
+      "url": "https://link.springer.com/article/10.1007/s00222-026-01440-6",
+      "status": "success",
+      "selected_records": 1,
+      "retrieved_at": "2026-08-07T14:42:00-0500"
+    },
+    {
+      "name": "DOI resolver",
+      "kind": "authoritative_identifier_resolver",
+      "url": "https://doi.org/10.1007/s00222-026-01440-6",
+      "status": "success",
+      "selected_records": 1,
+      "note": "Resolved to the SpringerLink Inventiones article.",
+      "retrieved_at": "2026-08-07T14:56:00-0500"
+    },
+    {
+      "name": "UPenn HAPPY harmonic-analysis event resources",
+      "kind": "institutional_event_index",
+      "url": "https://web.sas.upenn.edu/harmonic-analysis/resources/",
+      "status": "success",
+      "records_reviewed": 11,
+      "selected_records": 0,
+      "note": "ICM 2026 overlapped the window and was audited separately; PHADE and all other dated harmonic-analysis events were outside the window.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "PHADE 2026 organizer site",
+      "kind": "official_workshop_site",
+      "url": "https://sites.google.com/sas.upenn.edu/phade-2026/home",
+      "status": "success",
+      "records_reviewed": 38,
+      "selected_records": 0,
+      "note": "The workshop ran July 18-22 and was excluded by date.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "International Congress of Mathematicians 2026 official program",
+      "kind": "official_conference_program",
+      "url": "https://www.icm2026.org/event/ac193975-5d24-4628-8c30-ddb23de19a8b/HOME?environment=P2",
+      "status": "success",
+      "records_reviewed": 2,
+      "selected_records": 0,
+      "note": "The congress overlapped July 27-30. The date-filtered public talks by Manjul Bhargava and Ingrid Daubechies were not new substantive harmonic-analysis research; the Fields Medal ceremony was July 23 and outside the window.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "International Mathematical Union",
+      "kind": "official_prize_and_congress_site",
+      "url": "https://www.mathunion.org/",
+      "status": "success",
+      "records_reviewed": 4,
+      "selected_records": 0,
+      "note": "Hong Wang's harmonic-analysis-relevant Fields Medal announcement occurred July 23, outside the window.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "KTH Analysis Stockholm calendar",
+      "kind": "official_institution_event_calendar",
+      "url": "https://www.kth.se/math/kalender/seminar-analysis-sthlm?date=2026-07-05&length=180",
+      "status": "success",
+      "selected_records": 0,
+      "note": "No events were shown for July 27 through August 2.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "Oberwolfach 2026 scientific program",
+      "kind": "official_institute_program",
+      "url": "https://www.mfo.de/scientific-program/meetings/annual-program-flyer-2026.pdf",
+      "status": "success",
+      "records_reviewed": 2,
+      "selected_records": 0,
+      "note": "The in-window Bayesian Methods workshop was outside scope; the nearest harmonic-analysis program ran May 24-29.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "Banff International Research Station programs",
+      "kind": "official_institute_program",
+      "url": "https://www.birs.ca/events/2026/5-day-workshops/26w5554",
+      "status": "partial",
+      "selected_records": 0,
+      "failure": "Direct official page and poster fetch returned HTTP 403; indexed official metadata and organizer confirmation remained available.",
+      "note": "Geometric Harmonic Analysis ran June 7-13 and Applications of Harmonic Analysis to Convex Geometry ran April 26-May 1, both outside the window.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "IMAG organizer confirmation for BIRS 26w5554",
+      "kind": "official_organizer_event_page",
+      "url": "https://wpd.ugr.es/~imag/events/event/geometric-harmonic-analysis-in-the-discrete-and-continuous-settings/",
+      "status": "success",
+      "records_reviewed": 1,
+      "selected_records": 0,
+      "note": "The workshop ran June 7-13 and was excluded by date.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "ICERM programs",
+      "kind": "official_institute_program",
+      "url": "https://icerm.brown.edu/programs",
+      "status": "success",
+      "records_reviewed": 2,
+      "selected_records": 0,
+      "note": "Two programs touched the window; neither was a direct harmonic-analysis research event.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "SLMath workshops",
+      "kind": "official_institute_program",
+      "url": "https://www.slmath.org/workshops",
+      "status": "partial",
+      "records_reviewed": 3,
+      "selected_records": 0,
+      "failure": "The page required dynamic rendering; official indexed schedule metadata was retrieved.",
+      "note": "The three programs touching the window yielded no new harmonic-analysis event; ICM was a duplicate source.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    },
+    {
+      "name": "Fields Institute July 2026 calendar",
+      "kind": "official_institute_calendar",
+      "url": "https://www2.fields.utoronto.ca/calendar/month/2026-07",
+      "status": "success",
+      "records_reviewed": 5,
+      "selected_records": 0,
+      "note": "Five listings touched July 27-31; none reported a qualifying harmonic-analysis development.",
+      "retrieved_at": "2026-08-07T14:57:00-0500"
+    }
+  ],
+  "statistics": {
+    "source_records": {
+      "arxiv_all_math": 1481,
+      "arxiv_ha_category_mentions": 528,
+      "arxiv_ha_category_unique": 526,
+      "crossref_reviewed": 100,
+      "crossref_total_matches": 6401,
+      "supplementary_crossref_records": 1000,
+      "supplementary_openalex_records": 400
+    },
+    "raw_candidates": 1581,
+    "normalized_candidates": 1581,
+    "deduplicated_candidates": 1580,
+    "ha_relevant_candidates": 127,
+    "general_math_candidates": 320,
+    "source_query_outcomes": {"success": 18, "partial": 2, "failed": 0},
+    "selected": {
+      "harmonic_analysis": 20,
+      "general_mathematics": 8,
+      "total": 28
+    },
+    "briefed": {
+      "harmonic_analysis": 5,
+      "general_mathematics": 3,
+      "total": 8
+    },
+    "deduplication": {
+      "methods": [
+        "arXiv identifier",
+        "DOI",
+        "DOI-arXiv correspondence",
+        "normalized title and authors",
+        "semantic comparison"
+      ],
+      "duplicates_removed": 1
+    },
+    "candidate_filter_notes": {
+      "ha": "123 arXiv records plus 4 substantive Crossref records passed the reproducible broad harmonic-analysis relevance screen.",
+      "general": "320 records passed the broad title/topic importance screen before source verification and editorial ranking."
+    }
+  },
+  "ranking_scale": {
+    "minimum": 1,
+    "maximum": 5,
+    "fields": [
+      "relevance",
+      "importance",
+      "novelty",
+      "timeliness",
+      "source_reliability",
+      "research_interest",
+      "confidence"
+    ],
+    "policy": "Harmonic-analysis relevance and importance dominate the first section; importance and novelty dominate general mathematics. Scores are editorial component judgments, not mathematical proof verification."
+  },
+  "ranking_audit": [
+    {
+      "section": "harmonic_analysis",
+      "rank": 1,
+      "title": "Curved Kakeya problems and the projective geometry of paths",
+      "authors": ["Shaoming Guo", "Larry Guth", "Arian Nadjimzadah", "Minxing Shen", "Ruixiang Zhang"],
+      "event": {"type": "new_preprint", "date": "2026-07-30", "source_timestamp": "2026-07-30T03:38:02Z"},
+      "primary_url": "https://arxiv.org/abs/2607.27629v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.27629", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "A structural framework connects curved Kakeya incidence geometry, projective flatness, and oscillatory-integral path families."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 2,
+      "title": "The Endpoint Eigenfunction Bound for the Hermite Operator in Two Dimensions",
+      "authors": ["Eunhee Jeong", "Sanghyuk Lee", "Jaehyeon Ryu"],
+      "event": {"type": "new_preprint", "date": "2026-07-28", "source_timestamp": "2026-07-28T15:28:50Z"},
+      "primary_url": "https://arxiv.org/abs/2607.25859v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.25859", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "The claimed optimal two-dimensional endpoint closes the remaining Hermite spectral-projection case."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 3,
+      "title": "The HRT Conjecture for Symmetric Configurations and Real-Valued Functions",
+      "authors": ["Shuang Guan", "Kasso A. Okoudjou"],
+      "event": {"type": "new_preprint", "date": "2026-07-29", "source_timestamp": "2026-07-29T13:08:31Z"},
+      "primary_url": "https://arxiv.org/abs/2607.26878v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.26878", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "It advances a central time-frequency linear-independence conjecture for infinite symmetric families and real-valued four-point configurations."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 4,
+      "title": "Local smoothing for rough wave equations",
+      "authors": ["Jan Rozendaal", "Robert Schippa"],
+      "event": {"type": "new_preprint", "date": "2026-08-02", "source_timestamp": "2026-08-02T18:51:15Z"},
+      "primary_url": "https://arxiv.org/abs/2608.01440v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2608.01440", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "Sharp local smoothing in low dimensions is extended to rough coefficients through adapted bilinear restriction and decoupling."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 5,
+      "title": "Almost everywhere convergence of Mock Fourier series for the standard middle-fourth Cantor measure with respect to its canonical spectrum",
+      "authors": ["Min-Wei Tang", "Zhi-Yi Wu"],
+      "event": {"type": "new_preprint", "date": "2026-07-30", "source_timestamp": "2026-07-30T07:34:02Z"},
+      "primary_url": "https://arxiv.org/abs/2607.27796v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.27796", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "A weak-(1,1) maximal theorem yields almost-everywhere convergence for a canonical singular spectral measure."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 6,
+      "title": "Weak geometric lemma for ADR boundary of a uniform domain implies uniform rectifiability",
+      "authors": ["Aritro Pathak"],
+      "event": {"type": "new_preprint", "date": "2026-07-29", "source_timestamp": "2026-07-29T16:44:47Z"},
+      "primary_url": "https://arxiv.org/abs/2607.27114v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.27114", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "The geometric criterion is directly relevant to quantitative rectifiability and harmonic measure."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 7,
+      "title": "Pólya's Conjecture for the Neumann Laplacian on Euclidean Balls",
+      "authors": ["Yutian Li"],
+      "event": {"type": "new_preprint", "date": "2026-07-28", "source_timestamp": "2026-07-28T16:43:50Z"},
+      "primary_url": "https://arxiv.org/abs/2607.25958v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2607.25958", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 4, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "A sharp spectral-counting conjecture for Neumann eigenvalues on balls has strong spectral-analysis interest."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 8,
+      "title": "Fuglede's conjecture holds for three intervals",
+      "authors": ["Ruxi Shi"],
+      "event": {"type": "new_preprint", "date": "2026-07-27", "source_timestamp": "2026-07-27T05:01:12Z"},
+      "primary_url": "https://arxiv.org/abs/2607.24005v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.24005", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "The three-interval case advances the spectral-set/tiling correspondence in one dimension."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 9,
+      "title": "The Winding Number at the Critical Hölder Exponent 1/3: Failure of Universal Fourier Summation",
+      "authors": ["Rupert L. Frank", "Paata Ivanisvili"],
+      "event": {"type": "new_preprint", "date": "2026-07-28", "source_timestamp": "2026-07-28T15:30:21Z"},
+      "primary_url": "https://arxiv.org/abs/2607.25862v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.25862", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "A critical-regularity obstruction clarifies the limits of universal Fourier summation for winding number."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 10,
+      "title": "Counterexamples to the Landis conjecture in dimensions three and higher",
+      "authors": ["Rupert L. Frank", "Paata Ivanisvili"],
+      "event": {"type": "new_preprint", "date": "2026-08-01", "source_timestamp": "2026-08-01T18:03:09Z"},
+      "primary_url": "https://arxiv.org/abs/2608.00802v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2608.00802", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 4, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "The construction bears on a major unique-continuation threshold in elliptic PDE."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 11,
+      "title": "Multi-Parameter Exponential Sums with Product Hilbert Kernels",
+      "authors": ["Joonil Kim", "Hoyoung Song"],
+      "event": {"type": "revised_preprint", "date": "2026-07-31", "source_timestamp": "2026-07-31T20:45:14Z", "initial_submission": "2026-07-28T16:41:33Z", "revision_note": "minor correction and added explanations"},
+      "primary_url": "https://arxiv.org/abs/2607.25955v2",
+      "discovery_source": "arXiv API harmonic-analysis category/date and version sweep",
+      "identifiers": {"arxiv": "2607.25955", "version": "v2"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "The paper treats genuinely multi-parameter oscillatory sums with singular product kernels."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 12,
+      "title": "Nonconcentration of eigenfunctions in Microlocal Kakeya-Nikodym norms: a phase space approach",
+      "authors": ["Matthew D. Blair"],
+      "event": {"type": "new_preprint", "date": "2026-07-30", "source_timestamp": "2026-07-30T22:53:13Z"},
+      "primary_url": "https://arxiv.org/abs/2607.28882v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.28882", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "Phase-space nonconcentration estimates link eigenfunction bounds with microlocal Kakeya-Nikodym geometry."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 13,
+      "title": "An antichain approach to a conjecture of Zygmund",
+      "authors": ["Guillermo Rey"],
+      "event": {"type": "new_preprint", "date": "2026-07-28", "source_timestamp": "2026-07-28T16:42:40Z"},
+      "primary_url": "https://arxiv.org/abs/2607.25957v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.25957", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "The combinatorial antichain method addresses a classical Zygmund problem in harmonic analysis."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 14,
+      "title": "Dual boundedness of the maximal operator on concave Banach function spaces",
+      "authors": ["Andrei K. Lerner"],
+      "event": {"type": "new_preprint", "date": "2026-08-02", "source_timestamp": "2026-08-02T10:39:16Z"},
+      "primary_url": "https://arxiv.org/abs/2608.01140v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2608.01140", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "It develops maximal-operator duality in a broad Banach-function-space setting."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 15,
+      "title": "Localized frames on Euclidean balls",
+      "authors": ["Kevin Hughes", "Arie Israel", "Azita Mayeli"],
+      "event": {"type": "new_preprint", "date": "2026-07-27", "source_timestamp": "2026-07-27T02:56:56Z"},
+      "primary_url": "https://arxiv.org/abs/2607.23953v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.23953", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "Localized frames on balls contribute constructive harmonic-analysis tools for bounded Euclidean domains."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 16,
+      "title": "Knapp-type obstructions in multilinear fractal Fourier extension",
+      "authors": ["Itamar Oliveira", "Ana E. de Orellana"],
+      "event": {"type": "substantial_preprint_revision", "date": "2026-07-29", "source_timestamp": "2026-07-29T13:16:08Z", "initial_submission": "2026-02-09T12:06:42Z", "revision_note": "v3 incorporated referee comments and added examples"},
+      "primary_url": "https://arxiv.org/abs/2602.08568v3",
+      "discovery_source": "arXiv OAI-PMH and version-history sweep",
+      "identifiers": {"arxiv": "2602.08568", "version": "v3"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 3, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "The substantial v3 revision sharpens and illustrates obstruction mechanisms in multilinear fractal extension."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 17,
+      "title": "Favard length and generalized projections",
+      "authors": ["Izabella Laba", "Alex McDonald", "Krystal Taylor"],
+      "event": {"type": "new_preprint", "date": "2026-07-30", "source_timestamp": "2026-07-30T19:41:51Z"},
+      "primary_url": "https://arxiv.org/abs/2607.28793v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.28793", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "Generalized projection estimates extend a core geometric-measure problem around Favard length."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 18,
+      "title": "Hausdorff type Time-Trace Observability for Airy Equations on the Line and Point Observability on the Torus",
+      "authors": ["Ze Li"],
+      "event": {"type": "new_preprint", "date": "2026-07-27", "source_timestamp": "2026-07-27T07:18:56Z"},
+      "primary_url": "https://arxiv.org/abs/2607.24076v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2607.24076", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 4, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 4, "confidence": 5},
+      "reason": "Airy observability connects dispersive estimates, time traces, and thin-set geometry."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 19,
+      "title": "On the Frequency Function of Hardy-Littlewood Maximal Functions",
+      "authors": ["Carlos Garzón", "José Madrid"],
+      "event": {"type": "journal_publication", "date": "2026-07-27"},
+      "primary_url": "https://link.springer.com/article/10.1007/s00041-026-10283-x",
+      "discovery_source": "Crossref Works API followed by the publisher version of record",
+      "identifiers": {"doi": "10.1007/s00041-026-10283-x", "arxiv": "2601.19032", "related_arxiv_version": "v2", "journal": "Journal of Fourier Analysis and Applications", "volume": "32", "article": "75"},
+      "retrieved_at": "2026-08-07T14:42:00-0500",
+      "scores": {"relevance": 5, "importance": 3, "novelty": 2, "timeliness": 5, "source_reliability": 5, "research_interest": 3, "confidence": 5},
+      "reason": "A verified version-of-record publication concerns structural frequency behavior of the Hardy-Littlewood maximal function."
+    },
+    {
+      "section": "harmonic_analysis",
+      "rank": 20,
+      "title": "The Hardy averaging operator between Orlicz spaces and a new gauge functional characterizing a given Orlicz space",
+      "authors": ["Amiran Gogatishvili", "Ron Kerman", "Susanna Spektor"],
+      "event": {"type": "new_preprint", "date": "2026-08-01", "source_timestamp": "2026-08-01T20:18:10Z"},
+      "primary_url": "https://arxiv.org/abs/2608.00853v1",
+      "discovery_source": "arXiv API harmonic-analysis category/date sweep",
+      "identifiers": {"arxiv": "2608.00853", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 3, "novelty": 4, "timeliness": 5, "source_reliability": 5, "research_interest": 3, "confidence": 5},
+      "reason": "The operator-theoretic characterization is substantively within real-variable harmonic analysis."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 1,
+      "title": "Counterexamples to the Jacobian conjecture in dimensions greater than two",
+      "authors": ["Shuhong Gao"],
+      "event": {"type": "new_preprint", "date": "2026-07-31", "source_timestamp": "2026-07-31T19:08:59Z", "context": "The antecedent dimension-three announcement was July 19 and outside this window."},
+      "primary_url": "https://arxiv.org/abs/2608.00222v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2608.00222", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 4, "research_interest": 5, "confidence": 4},
+      "reason": "An extraordinary claimed extension of recently announced counterexamples to every complex dimension above two; ranked with an explicit unrefereed-claim caveat."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 2,
+      "title": "On the Kähler MMP and the transcendental base-point-free theorem",
+      "authors": ["Christopher Hacon", "Lingyao Xie"],
+      "event": {"type": "new_preprint", "date": "2026-07-27", "source_timestamp": "2026-07-27T18:39:33Z"},
+      "primary_url": "https://arxiv.org/abs/2607.24986v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2607.24986", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 4, "research_interest": 5, "confidence": 4},
+      "reason": "The claimed Kähler minimal-model program and transcendental base-point-free theorem would supply broad birational-geometric infrastructure."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 3,
+      "title": "Quantum Steenrod powers and Hamiltonian maps",
+      "authors": ["Shaoyun Bai", "Egor Shelukhin", "Nicholas Wilkins", "Guangbo Xu"],
+      "event": {"type": "new_preprint", "date": "2026-07-28", "source_timestamp": "2026-07-28T16:44:23Z"},
+      "primary_url": "https://arxiv.org/abs/2607.25960v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2607.25960", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 4, "research_interest": 5, "confidence": 4},
+      "reason": "Quantum operations yield several geometric and dynamical consequences, including uniruledness and periodic-point criteria."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 4,
+      "title": "Area-minimizing submanifolds are not generically smooth, except for geodesics, minimal surfaces, and minimal hypersurfaces",
+      "authors": ["Zhenhua Liu"],
+      "event": {"type": "revised_preprint", "date": "2026-07-28", "source_timestamp": "2026-07-28T17:58:24Z", "initial_submission": "2026-07-27T17:57:36Z", "revision_note": "discussions expanded"},
+      "primary_url": "https://arxiv.org/abs/2607.24735v2",
+      "discovery_source": "arXiv API all-mathematics date and version sweep",
+      "identifiers": {"arxiv": "2607.24735", "version": "v2"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 4, "research_interest": 5, "confidence": 4},
+      "reason": "The work identifies a sharp-looking divide in generic regularity for area minimizers across dimensions and codimensions."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 5,
+      "title": "Stability conditions and moduli spaces on projective families",
+      "authors": ["Chunyi Li", "Zhiyu Liu", "Ziqi Liu", "Emanuele Macrì", "Alexander Perry", "Paolo Stellari", "Xiaolei Zhao"],
+      "event": {"type": "new_preprint", "date": "2026-07-30", "source_timestamp": "2026-07-30T15:58:54Z"},
+      "primary_url": "https://arxiv.org/abs/2607.28411v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2607.28411", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 5, "timeliness": 5, "source_reliability": 4, "research_interest": 5, "confidence": 4},
+      "reason": "A family-level theory of stability conditions and moduli spaces has broad reach in algebraic geometry."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 6,
+      "title": "Proof of the Landau-Pekar formula for the effective mass of the polaron at strong coupling",
+      "authors": ["Morris Brooks"],
+      "event": {"type": "journal_publication", "date": "2026-07-28"},
+      "primary_url": "https://link.springer.com/article/10.1007/s00222-026-01440-6",
+      "discovery_source": "OpenAlex physical-sciences date/domain scan followed by DOI resolution and the publisher version of record",
+      "identifiers": {"doi": "10.1007/s00222-026-01440-6", "arxiv": "2409.08835", "journal": "Inventiones mathematicae"},
+      "retrieved_at": "2026-08-07T14:42:00-0500",
+      "scores": {"relevance": 5, "importance": 5, "novelty": 3, "timeliness": 5, "source_reliability": 5, "research_interest": 5, "confidence": 5},
+      "reason": "The reporting-window event is a verified Inventiones publication of a major strong-coupling asymptotic result."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 7,
+      "title": "Range convergence and sharp one-arm asymptotics for the critical percolation cluster in high dimensions",
+      "authors": ["M. Cabezas", "D. Croydon", "A. Fribergh", "N. Kawamoto"],
+      "event": {"type": "new_preprint", "date": "2026-07-27", "source_timestamp": "2026-07-27T15:31:28Z"},
+      "primary_url": "https://arxiv.org/abs/2607.24561v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2607.24561", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 4, "research_interest": 4, "confidence": 4},
+      "reason": "Sharp one-arm asymptotics and range convergence address central high-dimensional critical-percolation scaling questions."
+    },
+    {
+      "section": "general_mathematics",
+      "rank": 8,
+      "title": "The KLS constant is $O(\\log^{1/4} n)$",
+      "authors": ["Brayden Letwin"],
+      "event": {"type": "new_preprint", "date": "2026-07-27", "source_timestamp": "2026-07-27T08:45:35Z"},
+      "primary_url": "https://arxiv.org/abs/2607.24164v1",
+      "discovery_source": "arXiv API all-mathematics date sweep",
+      "identifiers": {"arxiv": "2607.24164", "version": "v1"},
+      "retrieved_at": "2026-08-07T14:41:00-0500",
+      "scores": {"relevance": 5, "importance": 4, "novelty": 4, "timeliness": 5, "source_reliability": 3, "research_interest": 5, "confidence": 3},
+      "reason": "The claimed logarithmic-exponent improvement is of high interest in asymptotic convex geometry, with confidence moderated for a first-version preprint."
+    }
+  ],
+  "outputs": {
+    "status": "success",
+    "files": [
+      {"path": "latest-week.md", "role": "canonical_english_report", "sha256": "3339fddfdfee3e2688167de0560691586705716b82bb811062c4abeb2ed46a96"},
+      {"path": "latest-week-zh.md", "role": "canonical_chinese_report", "sha256": "5891a7f6a7321d9dd4ff31265fdb5469f6319e2a43f7d580a7da4e26e8db241a"},
+      {"path": "archive/2026Week31.md", "role": "english_archive", "sha256": "3339fddfdfee3e2688167de0560691586705716b82bb811062c4abeb2ed46a96"},
+      {"path": "archive/2026Week31-zh.md", "role": "chinese_archive", "sha256": "5891a7f6a7321d9dd4ff31265fdb5469f6319e2a43f7d580a7da4e26e8db241a"},
+      {"path": "logs/generation.log", "role": "append_only_human_log"},
+      {"path": "logs/runs/2026-08-07T143340-0500-0ca39e.json", "role": "structured_run_log"}
+    ],
+    "pre_existing_unrelated_changes_excluded": ["README.md"]
+  },
+  "validation": {
+    "status": "success",
+    "checks": {
+      "reporting_window_and_source_dates": {"status": "success", "selected": 28, "note": "External event dates follow the authoritative source's displayed or deposited date; generation timestamps use America/Chicago."},
+      "selected_links": {"status": "success", "http_200": 28, "checked": 28},
+      "selection_limits": {"status": "success", "harmonic_analysis": "20/20", "general_mathematics": "8/8"},
+      "briefing_limits": {"status": "success", "harmonic_analysis": "5/5", "general_mathematics": "3/3"},
+      "briefing_index_order": {"status": "success", "harmonic_analysis": true, "general_mathematics": true},
+      "bilingual_selection_link_order_parity": {"status": "success", "matched": 28},
+      "bilingual_claim_qualification_uncertainty_parity": {"status": "success", "method": "manual semantic comparison"},
+      "bilingual_formula_multiset_parity": {"status": "success", "english": 20, "chinese": 20},
+      "archive_names": {"status": "success", "iso_week": "2026-W31"},
+      "archive_byte_identity": {"status": "success", "english": true, "chinese": true},
+      "structured_log_json": {"status": "success", "schema_version": 1},
+      "human_log_append_only": {"status": "success"},
+      "secret_scan": {"status": "success", "matches": 0},
+      "git_diff_check": {"status": "success"},
+      "working_tree_scope": {"status": "success", "note": "The pre-existing README.md modification is preserved and excluded from this run."}
+    }
+  },
+  "warnings": [
+    "The runtime did not expose requested or actual model identifiers; both are recorded as unavailable.",
+    "An arXiv lastUpdatedDate-only API query degraded to submitted-date behavior, so revision discovery is not exhaustive; OAI-PMH and explicit version histories supplemented the sweep.",
+    "The selected arXiv items are preprints unless a publisher version of record is explicitly identified; reported claims were checked against source metadata and abstracts, not independently proof-verified.",
+    "External event dates follow their authoritative source records. In particular, arXiv's July 27 displayed date is retained for arXiv:2607.23953 although its UTC timestamp corresponds to late July 26 in America/Chicago.",
+    "The ICM Fields Medal event occurred July 23, outside the reporting window, and was excluded; no in-window event source displaced a stronger selected research item.",
+    "The first sandboxed network lookup failed DNS resolution; the authorized network retry succeeded.",
+    "A pre-existing README.md modification was left untouched and excluded from staging.",
+    "The report push outcome is pending at log finalization; an append-only publication record and structured-log update will record the actual result after the push attempt."
+  ],
+  "errors": [],
+  "git": {
+    "branch": "main",
+    "remote": "origin",
+    "base_commit": "13e032f14ae90d6c2419811e49a3996e74a4c75b",
+    "preflight": {
+      "head_matches_origin_main": true,
+      "ahead": 0,
+      "behind": 0
+    },
+    "commit_message": "report: generate HANews 2026 Week 31 [run:2026-08-07T143340-0500-0ca39e]",
+    "report_commit": null,
+    "push": {
+      "status": "pending",
+      "outcome": "not_attempted_at_log_finalization"
+    }
+  },
+  "status": "success"
+}
