@@ -73,7 +73,7 @@ genuine AI contribution, independent reporting, and research-practice impact.
 
 ```markdown
 # HANews Weekly
-## YYYY-MM-DD — YYYY-MM-DD
+Weekly report on YYYY-MM-DD — YYYY-MM-DD
 Generated: YYYY-MM-DD HH:MM TZ
 Model: <request model or unavailable>
 
