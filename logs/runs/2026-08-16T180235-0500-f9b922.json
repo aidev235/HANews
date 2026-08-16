@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-16T180235-0500-f9b922",
+  "project": "HANews",
+  "started_at": "2026-08-16T18:02:35-0500",
+  "finished_at": "2026-08-16T18:26:34-0500",
+  "duration_seconds": 1439,
+  "timezone": "America/Chicago",
+  "reporting_window": {
+    "start": "2026-08-03",
+    "end": "2026-08-09",
+    "iso_year": 2026,
+    "iso_week": 32
+  },
+  "trigger": "manual",
+  "models": [
+    {
+      "type": "requested",
+      "identifier": "CodeX-GPT5.6-sol-ultra-fast"
+    },
+    {
+      "type": "runtime",
+      "identifier": "unavailable"
+    }
+  ],
+  "sources": [
+    {
+      "name": "arXiv API",
+      "kind": "official_preprint_api",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "success",
+      "outcome": "Retrieved and locally date-filtered 1,438 new mathematics records in the reporting window and identified one material in-window revision.",
+      "retrieved_at": "2026-08-16T18:26:34-0500"
+    },
+    {
+      "name": "arXiv abstract and paper pages",
+      "kind": "official_preprint_source",
+      "url": "https://arxiv.org/",
+      "status": "partial",
+      "records_verified": 25,
+      "outcome": "Selected identifiers, versions, titles, authors, event dates, abstracts, and relevant disclosure text were checked; intermittent page and cache limitations were supplemented with API metadata and inspectable paper text.",
+      "retrieved_at": "2026-08-16T18:26:34-0500"
+    },
+    {
+      "name": "Crossref, DOI, publisher, and artifact resolvers",
+      "kind": "authoritative_bibliographic_and_artifact_metadata",
+      "urls": [
+        "https://api.crossref.org/works",
+        "https://doi.org/10.1007/s00440-026-01528-3",
+        "https://doi.org/10.5281/zenodo.21765287",
+        "https://doi.org/10.5281/zenodo.21845291"
+      ],
+      "status": "success",
+      "publisher_events": 4,
+      "selected_records": 1,
+      "outcome": "Four in-window publisher events and referenced computer-verification artifacts were resolved; one journal-publication event was selected.",
+      "retrieved_at": "2026-08-16T18:26:34-0500"
+    },
+    {
+      "name": "Independent AI-mathematics coverage",
+      "kind": "news_and_independent_analysis",
+      "urls": [
+        "https://www.hankookilbo.com/news/article/amp/A2026080310000002654",
+        "https://www.understandingai.org/p/mathematicians-are-grappling-with",
+        "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
+      ],
+      "status": "success",
+      "raw_coverage_records": 2,
+      "normalized_advances": 1,
+      "qualifying_items": 1,
+      "outcome": "Two in-window independent coverage records normalized to one AI-mathematics advance; critical reporting supplied attribution, originality, and validation caveats.",
+      "retrieved_at": "2026-08-16T18:26:34-0500"
+    },
+    {
+      "name": "OpenAI ten-advances technical package",
+      "kind": "interested_party_technical_source",
+      "urls": [
+        "https://openai.com/index/ten-advances-in-mathematics/",
+        "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+        "https://github.com/openai/ten-proofs"
+      ],
+      "status": "success",
+      "outcome": "The overview, updated manuscript, and Lean artifacts were inspectable; the publisher is also the model developer and principal guarantor.",
+      "retrieved_at": "2026-08-16T18:26:34-0500"
+    },
+    {
+      "name": "Expert and independent-paper corroboration",
+      "kind": "corroboration",
+      "urls": [
+        "https://terrytao.wordpress.com/2026/08/06/a-partial-digestion-of-the-hrt-counterexample/",
+        "https://arxiv.org/abs/2608.01579v1",
+        "https://arxiv.org/abs/2608.10028v1"
+      ],
+      "status": "success",
+      "outcome": "Expert commentary and independent constructions were used as qualified corroboration, not as substitutes for peer review or full proof verification.",
+      "retrieved_at": "2026-08-16T18:26:34-0500"
+    }
+  ],
+  "statistics": {
+    "raw_candidates": 1445,
+    "normalized_candidates": 1444,
+    "deduplicated_candidates": 1444,
+    "plausible_assessed": 46,
+    "ha_relevant": 29,
+    "general_candidates": 14,
+    "ai_math_candidates": 3,
+    "candidate_basis": {
+      "local_window_arxiv_new_records": 1438,
+      "material_revisions": 1,
+      "publisher_publication_events": 4,
+      "independent_ai_coverage_records": 2,
+      "normalization_note": "The two independent AI coverage records normalize to one mathematical advance."
+    },
+    "source_query_outcomes": {
+      "success": 5,
+      "partial": 1,
+      "failed": 0
+    },
+    "selected": {
+      "ha": 18,
+      "general": 8,
+      "ai_math": 1,
+      "total": 27
+    },
+    "briefings": {
+      "ha": 5,
+      "general": 3,
+      "ai_math": 1,
+      "total": 9
+    }
+  },
+  "ranking_audit": [
+    {
+      "candidate_id": "2608.05044",
+      "list": "ha",
+      "rank": 1,
+      "title": "Linear dependence of time-frequency shifts of a Schwartz function",
+      "expected_report_link": "https://arxiv.org/abs/2608.05044v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 5
+      },
+      "selection_rationale": "Highest-ranked HA event because it directly overturns a long-standing core conjecture with an explicit, inspectable construction."
+    },
+    {
+      "candidate_id": "2608.05114",
+      "list": "ha",
+      "rank": 2,
+      "title": "Counterexamples to Schiffer's Conjecture",
+      "expected_report_link": "https://arxiv.org/abs/2608.05114v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected near the top for resolving a long-standing Fourier-analytic rigidity problem with an infinite family of counterexamples."
+    },
+    {
+      "candidate_id": "2608.08190",
+      "list": "ha",
+      "rank": 3,
+      "title": "The Minimum Cardinality of a Dependent Finite Gabor System Is Four",
+      "expected_report_link": "https://arxiv.org/abs/2608.08190v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected as the strongest same-week refinement of the HRT counterexample because it identifies a sharp cardinality threshold."
+    },
+    {
+      "candidate_id": "2608.04237",
+      "list": "ha",
+      "rank": 4,
+      "title": "The trace-free Beurling--Ahlfors transform and the Bourgain--Brezis problem for Hodge systems",
+      "expected_report_link": "https://arxiv.org/abs/2608.04237v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for its direct resolution of a major endpoint HA problem and its reusable singular-integral mechanism."
+    },
+    {
+      "candidate_id": "2608.06679",
+      "list": "ha",
+      "rank": 5,
+      "title": "Tilings, packings, and the existence of Schwartz-class Gabor windows",
+      "expected_report_link": "https://arxiv.org/abs/2608.06679v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a complete structural characterization at the center of Gabor-frame theory."
+    },
+    {
+      "candidate_id": "2608.04992",
+      "list": "ha",
+      "rank": 6,
+      "title": "Gabor Frames of Totally Positive Functions: A Complete Characterization",
+      "expected_report_link": "https://arxiv.org/abs/2608.04992v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a clean if-and-only-if solution to a prominent Gabor-frame classification problem."
+    },
+    {
+      "candidate_id": "2608.05621",
+      "list": "ha",
+      "rank": 7,
+      "title": "A positive solution to the generalized Busemann--Petty problem with subspace dimensions $2$ and $3$",
+      "expected_report_link": "https://arxiv.org/abs/2608.05621v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "Selected because it closes the outstanding low-dimensional section cases of a foundational Radon-transform problem."
+    },
+    {
+      "candidate_id": "2505.20657v2",
+      "list": "ha",
+      "rank": 8,
+      "title": "Sharp spectral-cluster restriction bounds for orthonormal systems",
+      "expected_report_link": "https://arxiv.org/abs/2505.20657v2",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected because the in-window revision upgrades a central restriction result to sharp summability across all cases."
+    },
+    {
+      "candidate_id": "2608.07464",
+      "list": "ha",
+      "rank": 9,
+      "title": "Maximal estimates for perturbations of the Schrödinger operator on $\\mathbb{T}^d$",
+      "expected_report_link": "https://arxiv.org/abs/2608.07464v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a sharp counterexample phenomenon linking maximal estimates, incidence geometry, and dispersive evolution."
+    },
+    {
+      "candidate_id": "2608.03004",
+      "list": "ha",
+      "rank": 10,
+      "title": "On the endpoint estimate for discrete spherical average over sparse sequences",
+      "expected_report_link": "https://arxiv.org/abs/2608.03004v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for progress on a named discrete spherical maximal endpoint problem with sharp sequence-sensitive structure."
+    },
+    {
+      "candidate_id": "2608.08893",
+      "list": "ha",
+      "rank": 11,
+      "title": "Sharp $\\ell^p$-Improving Estimates for Fixed-Radius Discrete Spherical Averages",
+      "expected_report_link": "https://arxiv.org/abs/2608.08893v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for reaching the sharp lower endpoint in a central discrete spherical improving problem."
+    },
+    {
+      "candidate_id": "2608.06178",
+      "list": "ha",
+      "rank": 12,
+      "title": "Decay rates for (2+1)-dimensional oscillatory integral operators with homogeneous polynomial phases",
+      "expected_report_link": "https://arxiv.org/abs/2608.06178v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a direct, quantitatively sharp oscillatory-integral theorem tied to a standing conjecture."
+    },
+    {
+      "candidate_id": "2608.03194",
+      "list": "ha",
+      "rank": 13,
+      "title": "Strichartz estimates for quasi-periodic functions on long time intervals: An arithmetic approach",
+      "expected_report_link": "https://arxiv.org/abs/2608.03194v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for connecting arithmetic structure to endpoint and long-time dispersive estimates."
+    },
+    {
+      "candidate_id": "DOI:10.1007/s00440-026-01528-3",
+      "list": "ha",
+      "rank": 14,
+      "title": "Fourier dimension of Mandelbrot cascades on planar curves",
+      "expected_report_link": "https://doi.org/10.1007/s00440-026-01528-3",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 5,
+        "research_interest": 4,
+        "confidence": 5
+      },
+      "selection_rationale": "Selected as the week's strongest verified journal publication at the HA–geometric-measure-theory boundary."
+    },
+    {
+      "candidate_id": "2608.02340",
+      "list": "ha",
+      "rank": 15,
+      "title": "Pointwise endpoint limits for nonlocal operators",
+      "expected_report_link": "https://arxiv.org/abs/2608.02340v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a broad endpoint framework with a concrete resolution of a previously open p equals one case."
+    },
+    {
+      "candidate_id": "2608.08201",
+      "list": "ha",
+      "rank": 16,
+      "title": "A Study on Kakeya Needle Problem for $(n-1)$-Rectifiable Set",
+      "expected_report_link": "https://arxiv.org/abs/2608.08201v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 3,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 4,
+        "confidence": 3
+      },
+      "selection_rationale": "Selected for a substantive new Kakeya-style construction squarely within the report's HA scope."
+    },
+    {
+      "candidate_id": "2608.08953",
+      "list": "ha",
+      "rank": 17,
+      "title": "A computer-assisted counterexample to the planar Berenstein conjecture",
+      "expected_report_link": "https://arxiv.org/abs/2608.08953v1",
+      "scores": {
+        "relevance": 4,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a distinct certified rigidity counterexample at the Fourier-analysis and elliptic-PDE interface."
+    },
+    {
+      "candidate_id": "2608.08683",
+      "list": "ha",
+      "rank": 18,
+      "title": "Sharp $L^2$ Estimates for $(2+1)$-dimensional oscillatory integral operators with homogeneous binomial phases",
+      "expected_report_link": "https://arxiv.org/abs/2608.08683v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 3,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected within the cap as a clean sharp estimate for a technically central oscillatory-integral model."
+    },
+    {
+      "candidate_id": "2608.08538",
+      "list": "general",
+      "rank": 1,
+      "title": "The Mathieu group $M_{23}$ is a Galois group over $\\mathbb{Q}$",
+      "expected_report_link": "https://arxiv.org/abs/2608.08538v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Ranked first in general mathematics for completing a decades-old inverse-Galois classification program with an explicit construction."
+    },
+    {
+      "candidate_id": "2608.03684",
+      "list": "general",
+      "rank": 2,
+      "title": "The period-index conjecture is false",
+      "expected_report_link": "https://arxiv.org/abs/2608.03684v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a decisive counterexample to a broad algebraic-geometric conjecture with sharp dimensional scope."
+    },
+    {
+      "candidate_id": "2608.03488",
+      "list": "general",
+      "rank": 3,
+      "title": "A solution to Morrey's problem in $\\mathbb{R}^{2\\times m}$",
+      "expected_report_link": "https://arxiv.org/abs/2608.03488v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "Selected for major progress on a classical calculus-of-variations problem, with dimensional limits stated explicitly."
+    },
+    {
+      "candidate_id": "2608.07173",
+      "list": "general",
+      "rank": 4,
+      "title": "Modularity of Higher Theta Series III: Proof of the Modularity Conjecture",
+      "expected_report_link": "https://arxiv.org/abs/2608.07173v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for completing a major multi-paper arithmetic-geometry program with a new trace mechanism."
+    },
+    {
+      "candidate_id": "2608.10012",
+      "list": "general",
+      "rank": 5,
+      "title": "A 112-Vertex Counterexample to the Petersen Coloring Conjecture",
+      "expected_report_link": "https://arxiv.org/abs/2608.10012v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 5,
+        "research_interest": 5,
+        "confidence": 5
+      },
+      "selection_rationale": "Selected for a reproducible computational disproof independently reinforced by a human argument."
+    },
+    {
+      "candidate_id": "2608.07818",
+      "list": "general",
+      "rank": 6,
+      "title": "Counterexamples to the weak Hedetniemi Conjecture",
+      "expected_report_link": "https://arxiv.org/abs/2608.07818v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected because it overturns a surviving weakened form of a famous graph-product conjecture."
+    },
+    {
+      "candidate_id": "2608.03572",
+      "list": "general",
+      "rank": 7,
+      "title": "CscK metrics on birational models of projective varieties",
+      "expected_report_link": "https://arxiv.org/abs/2608.03572v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a broad existence theorem connecting birational geometry to canonical metrics."
+    },
+    {
+      "candidate_id": "2608.07212",
+      "list": "general",
+      "rank": 8,
+      "title": "Real morsifications via the trace map",
+      "expected_report_link": "https://arxiv.org/abs/2608.07212v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected at the general-list cap for closing a clear singularity-theory existence problem with a new constructive tool."
+    },
+    {
+      "candidate_id": "AI-2026W32-ASTRA-TEN-ADVANCES",
+      "list": "ai_math",
+      "rank": 1,
+      "title": "챗봇 넘어 'AI 연구원'으로…오픈AI, 수학 난제 10개 정복",
+      "expected_report_link": "https://www.hankookilbo.com/news/article/amp/A2026080310000002654",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "The only AI-math candidate meeting the strict combination of an in-window independent news source, inspectable technical material, substantive mathematical claims, and explicit limitations on autonomy and credibility."
+    }
+  ],
+  "outputs": {
+    "status": "success",
+    "english_report": "latest-week.md",
+    "chinese_report": "latest-week-zh.md",
+    "english_archive": "archive/2026Week32.md",
+    "chinese_archive": "archive/2026Week32-zh.md",
+    "knowledge_base": "knowledge-base/2026Week32.md",
+    "files": [
+      {
+        "path": "latest-week.md",
+        "role": "canonical_english_report"
+      },
+      {
+        "path": "latest-week-zh.md",
+        "role": "canonical_chinese_report"
+      },
+      {
+        "path": "archive/2026Week32.md",
+        "role": "english_archive"
+      },
+      {
+        "path": "archive/2026Week32-zh.md",
+        "role": "chinese_archive"
+      },
+      {
+        "path": "knowledge-base/2026Week32.md",
+        "role": "candidate_knowledge_base"
+      },
+      {
+        "path": "logs/generation.log",
+        "role": "append_only_human_log"
+      },
+      {
+        "path": "logs/runs/2026-08-16T180235-0500-f9b922.json",
+        "role": "structured_run_log"
+      }
+    ]
+  },
+  "validation": {
+    "status": "success_with_warnings",
+    "checks": {
+      "reporting_window_and_iso_week": {
+        "status": "success",
+        "iso_week": "2026-W32"
+      },
+      "knowledge_base_coverage": {
+        "status": "success",
+        "plausible_candidates": 46,
+        "selected_candidates": 27
+      },
+      "kb_json_report_parity": {
+        "status": "success",
+        "matched": 27
+      },
+      "selection_limits": {
+        "status": "success",
+        "ha": "18/20",
+        "general": "8/8",
+        "ai_math": "1/3"
+      },
+      "briefing_limits": {
+        "status": "success",
+        "ha": "5/5",
+        "general": "3/3",
+        "ai_math": "1/3"
+      },
+      "briefing_index_order_and_bold_rules": {
+        "status": "success"
+      },
+      "english_chinese_selection_link_order_parity": {
+        "status": "success",
+        "matched": 27
+      },
+      "archive_names_and_byte_identity": {
+        "status": "success",
+        "iso_week": "2026-W32"
+      },
+      "url_validation": {
+        "status": "partial",
+        "checked": 33,
+        "reachable": 31,
+        "restricted": 2,
+        "restricted_urls": [
+          "https://openai.com/index/ten-advances-in-mathematics/",
+          "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
+        ],
+        "note": "The two restricted pages returned HTTP 403 to curl but were inspectable through indexed or browser retrieval, so their links were retained."
+      },
+      "structured_log_json": {
+        "status": "success",
+        "schema_version": 1
+      },
+      "human_log_append_only": {
+        "status": "success"
+      },
+      "secret_scan": {
+        "status": "success",
+        "matches": 0
+      },
+      "git_diff_check": {
+        "status": "success"
+      }
+    }
+  },
+  "warnings": [
+    "The requested model identifier was copied exactly, but the runtime did not expose an independently verifiable actual model identifier.",
+    "Most selected mathematics items are unrefereed preprints; their claims were checked against primary metadata and manuscripts, not independently proof-verified.",
+    "Revision discovery through arXiv date queries is not exhaustive; explicit version histories and DOI metadata supplemented the weekly sweep.",
+    "The selected AI-math package is an interested-party release. Independent reporting raised attribution and originality concerns, and the public materials do not expose the full problem pool, failures, prompts, trajectories, orchestration, or precise human interventions.",
+    "The OpenAI and Scientific American pages returned HTTP 403 to curl, but both were inspectable through indexed or browser retrieval and their links were retained.",
+    "The report push is pending at content-log finalization; a later append-only publication record and structured-log update must record the actual push result.",
+    "Before the report commit, local main was already two commits ahead of origin/main; direct publication will also publish those existing local commits."
+  ],
+  "errors": [],
+  "git": {
+    "branch": "main",
+    "remote": "origin",
+    "base_commit": "26774509738b38586403127e12ccd2983917e3d3",
+    "preflight": {
+      "ahead": 2,
+      "behind": 0
+    },
+    "commit_message": "report: generate HANews 2026 Week 32 [run:2026-08-16T180235-0500-f9b922]",
+    "report_commit": null,
+    "push": {
+      "status": "pending",
+      "outcome": "not_attempted_at_log_finalization"
+    },
+    "push_outcome": "pending"
+  },
+  "failed_stage": null,
+  "status": "success"
+}
