@@ -5,6 +5,7 @@
   "started_at": "2026-08-16T18:02:35-0500",
   "finished_at": "2026-08-16T18:26:34-0500",
   "duration_seconds": 1439,
+  "published_at": "2026-08-16T18:32:56-0500",
   "timezone": "America/Chicago",
   "reporting_window": {
     "start": "2026-08-03",
@@ -700,8 +701,7 @@
     "Revision discovery through arXiv date queries is not exhaustive; explicit version histories and DOI metadata supplemented the weekly sweep.",
     "The selected AI-math package is an interested-party release. Independent reporting raised attribution and originality concerns, and the public materials do not expose the full problem pool, failures, prompts, trajectories, orchestration, or precise human interventions.",
     "The OpenAI and Scientific American pages returned HTTP 403 to curl, but both were inspectable through indexed or browser retrieval and their links were retained.",
-    "The report push is pending at content-log finalization; a later append-only publication record and structured-log update must record the actual push result.",
-    "Before the report commit, local main was already two commits ahead of origin/main; direct publication will also publish those existing local commits."
+    "Direct publication also pushed two pre-existing local Prompt.md commits that were already ahead of origin/main, as authorized by the user."
   ],
   "errors": [],
   "git": {
@@ -713,12 +713,15 @@
       "behind": 0
     },
     "commit_message": "report: generate HANews 2026 Week 32 [run:2026-08-16T180235-0500-f9b922]",
-    "report_commit": null,
+    "report_commit": "9a89bd534349f9e3faa726bd16a83f95ac8472d4",
     "push": {
-      "status": "pending",
-      "outcome": "not_attempted_at_log_finalization"
+      "status": "success",
+      "attempted_at": "2026-08-16T18:32:56-0500",
+      "remote_before": "19f955ffe517d4bf408876f6445d3eb31048168a",
+      "remote_after": "9a89bd534349f9e3faa726bd16a83f95ac8472d4",
+      "outcome": "success main->main"
     },
-    "push_outcome": "pending"
+    "push_outcome": "success main->main"
   },
   "failed_stage": null,
   "status": "success"
