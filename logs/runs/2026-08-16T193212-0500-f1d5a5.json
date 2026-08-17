@@ -5,7 +5,7 @@
   "started_at": "2026-08-16T19:32:12-0500",
   "finished_at": "2026-08-16T19:39:09-0500",
   "duration_seconds": 417,
-  "published_at": null,
+  "published_at": "2026-08-16T19:51:56-0500",
   "timezone": "America/Chicago",
   "reporting_window": {
     "start": "2026-08-03",
@@ -1052,8 +1052,7 @@
   "warnings": [
     "This correction reused the earlier verified research evidence and did not repeat the full weekly discovery crawl.",
     "The exact runtime model identifier was unavailable; the requested model identifier is preserved verbatim.",
-    "The historical prior-run JSON was intentionally left unchanged as an immutable record of the original published run.",
-    "Git publication is pending and must not be reported as successful until the correction commit is pushed."
+    "The historical prior-run JSON was intentionally left unchanged as an immutable record of the original published run."
   ],
   "errors": [],
   "git": {
@@ -1065,10 +1064,15 @@
       "behind": 0
     },
     "commit_message": "report: generate HANews 2026 Week 32 [run:2026-08-16T193212-0500-f1d5a5]",
+    "report_commit": "d69f87fed300b7b784dc2e3c0fd27b891859e002",
     "push": {
-      "status": "pending"
+      "status": "success",
+      "attempted_at": "2026-08-16T19:51:56-0500",
+      "remote_before": "2538ec55e3ff509450c67f2b3ac18e50ef986cdc",
+      "remote_after": "d69f87fed300b7b784dc2e3c0fd27b891859e002",
+      "outcome": "success main->main"
     },
-    "push_outcome": "pending"
+    "push_outcome": "success main->main"
   },
   "failed_stage": null,
   "status": "success"
