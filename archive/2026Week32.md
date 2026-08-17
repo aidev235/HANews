@@ -1,6 +1,6 @@
 # HANews Weekly
 Weekly report on 2026-08-03 — 2026-08-09
-Generated: 2026-08-16 18:11 CDT
+Generated: 2026-08-16 19:32 CDT
 Model: CodeX-GPT5.6-sol-ultra-fast
 
 ## Harmonic Analysis — Top 20
@@ -37,7 +37,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 ## AI in Mathematics Progress — Top 3
 
-1. **[챗봇 넘어 'AI 연구원'으로…오픈AI, 수학 난제 10개 정복](https://www.hankookilbo.com/news/article/amp/A2026080310000002654)**
+1. **[Ten advances in mathematics and theoretical computer science](https://www.hankookilbo.com/news/article/amp/A2026080310000002654)**
 
 ---
 
@@ -127,7 +127,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 # AI in Mathematics Progress Briefing
 
-## 1. 챗봇 넘어 'AI 연구원'으로…오픈AI, 수학 난제 10개 정복
+## 1. Ten advances in mathematics and theoretical computer science
 
 **Source/event:** [Hankook Ilbo](https://www.hankookilbo.com/news/article/amp/A2026080310000002654), independent coverage published August 3, 2026, following an OpenAI technical report published August 1 and materially updated August 6.
 **Technical sources:** [OpenAI overview](https://openai.com/index/ten-advances-in-mathematics/), [technical manuscript](https://cdn.openai.com/pdf/ten-proofs-oai.pdf), and [Lean repository](https://github.com/openai/ten-proofs).

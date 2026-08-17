@@ -1,49 +1,49 @@
 # HANews 周报
 2026-08-03 — 2026-08-09 周报
-Generated: 2026-08-16 18:11 CDT
+Generated: 2026-08-16 19:32 CDT
 Model: CodeX-GPT5.6-sol-ultra-fast
 
 ## 调和分析 — 前 20 项
 
-1. **[Linear dependence of time-frequency shifts of a Schwartz function](https://arxiv.org/abs/2608.05044v1)**
-2. **[Counterexamples to Schiffer's Conjecture](https://arxiv.org/abs/2608.05114v1)**
-3. **[The Minimum Cardinality of a Dependent Finite Gabor System Is Four](https://arxiv.org/abs/2608.08190v1)**
-4. **[The trace-free Beurling--Ahlfors transform and the Bourgain--Brezis problem for Hodge systems](https://arxiv.org/abs/2608.04237v1)**
-5. **[Tilings, packings, and the existence of Schwartz-class Gabor windows](https://arxiv.org/abs/2608.06679v1)**
-6. [Gabor Frames of Totally Positive Functions: A Complete Characterization](https://arxiv.org/abs/2608.04992v1)
-7. [A positive solution to the generalized Busemann--Petty problem with subspace dimensions $2$ and $3$](https://arxiv.org/abs/2608.05621v1)
-8. [Sharp spectral-cluster restriction bounds for orthonormal systems](https://arxiv.org/abs/2505.20657v2)
-9. [Maximal estimates for perturbations of the Schrödinger operator on $\mathbb{T}^d$](https://arxiv.org/abs/2608.07464v1)
-10. [On the endpoint estimate for discrete spherical average over sparse sequences](https://arxiv.org/abs/2608.03004v1)
-11. [Sharp $\ell^p$-Improving Estimates for Fixed-Radius Discrete Spherical Averages](https://arxiv.org/abs/2608.08893v1)
-12. [Decay rates for (2+1)-dimensional oscillatory integral operators with homogeneous polynomial phases](https://arxiv.org/abs/2608.06178v1)
-13. [Strichartz estimates for quasi-periodic functions on long time intervals: An arithmetic approach](https://arxiv.org/abs/2608.03194v1)
-14. [Fourier dimension of Mandelbrot cascades on planar curves](https://doi.org/10.1007/s00440-026-01528-3)
-15. [Pointwise endpoint limits for nonlocal operators](https://arxiv.org/abs/2608.02340v1)
-16. [A Study on Kakeya Needle Problem for $(n-1)$-Rectifiable Set](https://arxiv.org/abs/2608.08201v1)
-17. [A computer-assisted counterexample to the planar Berenstein conjecture](https://arxiv.org/abs/2608.08953v1)
-18. [Sharp $L^2$ Estimates for $(2+1)$-dimensional oscillatory integral operators with homogeneous binomial phases](https://arxiv.org/abs/2608.08683v1)
+1. **[Schwartz函数时频平移的线性相关性](https://arxiv.org/abs/2608.05044v1)**
+2. **[Schiffer猜想的反例](https://arxiv.org/abs/2608.05114v1)**
+3. **[线性相关有限Gabor系统的最小基数为四](https://arxiv.org/abs/2608.08190v1)**
+4. **[无迹Beurling--Ahlfors变换与Hodge系统的Bourgain--Brezis问题](https://arxiv.org/abs/2608.04237v1)**
+5. **[平铺、堆积与Schwartz类Gabor窗的存在性](https://arxiv.org/abs/2608.06679v1)**
+6. [全正函数的Gabor框架：完全刻画](https://arxiv.org/abs/2608.04992v1)
+7. [子空间维数为$2$和$3$的广义Busemann--Petty问题的肯定解](https://arxiv.org/abs/2608.05621v1)
+8. [正交系统的尖锐谱簇限制估计](https://arxiv.org/abs/2505.20657v2)
+9. [$\mathbb{T}^d$上Schrödinger算子扰动的极大估计](https://arxiv.org/abs/2608.07464v1)
+10. [稀疏序列上离散球平均的端点估计](https://arxiv.org/abs/2608.03004v1)
+11. [固定半径离散球平均的尖锐$\ell^p$改进估计](https://arxiv.org/abs/2608.08893v1)
+12. [具有齐次多项式相位的$(2+1)$维振荡积分算子的衰减率](https://arxiv.org/abs/2608.06178v1)
+13. [长时间区间上拟周期函数的Strichartz估计：算术方法](https://arxiv.org/abs/2608.03194v1)
+14. [平面曲线上Mandelbrot级联的Fourier维数](https://doi.org/10.1007/s00440-026-01528-3)
+15. [非局部算子的逐点端点极限](https://arxiv.org/abs/2608.02340v1)
+16. [关于$(n-1)$维可求长集的Kakeya针问题研究](https://arxiv.org/abs/2608.08201v1)
+17. [平面Berenstein猜想的计算机辅助反例](https://arxiv.org/abs/2608.08953v1)
+18. [具有齐次二项式相位的$(2+1)$维振荡积分算子的尖锐$L^2$估计](https://arxiv.org/abs/2608.08683v1)
 
 ## 一般数学 — 前 8 项
 
-1. **[The Mathieu group $M_{23}$ is a Galois group over $\mathbb{Q}$](https://arxiv.org/abs/2608.08538v1)**
-2. **[The period-index conjecture is false](https://arxiv.org/abs/2608.03684v1)**
-3. **[A solution to Morrey's problem in $\mathbb{R}^{2\times m}$](https://arxiv.org/abs/2608.03488v1)**
-4. [Modularity of Higher Theta Series III: Proof of the Modularity Conjecture](https://arxiv.org/abs/2608.07173v1)
-5. [A 112-Vertex Counterexample to the Petersen Coloring Conjecture](https://arxiv.org/abs/2608.10012v1)
-6. [Counterexamples to the weak Hedetniemi Conjecture](https://arxiv.org/abs/2608.07818v1)
-7. [CscK metrics on birational models of projective varieties](https://arxiv.org/abs/2608.03572v1)
-8. [Real morsifications via the trace map](https://arxiv.org/abs/2608.07212v1)
+1. **[Mathieu群$M_{23}$是$\mathbb{Q}$上的Galois群](https://arxiv.org/abs/2608.08538v1)**
+2. **[周期—指数猜想不成立](https://arxiv.org/abs/2608.03684v1)**
+3. **[$\mathbb{R}^{2\times m}$中Morrey问题的解](https://arxiv.org/abs/2608.03488v1)**
+4. [高阶Theta级数的模性 III：模性猜想的证明](https://arxiv.org/abs/2608.07173v1)
+5. [Petersen着色猜想的一个112顶点反例](https://arxiv.org/abs/2608.10012v1)
+6. [弱Hedetniemi猜想的反例](https://arxiv.org/abs/2608.07818v1)
+7. [射影簇双有理模型上的CscK度量](https://arxiv.org/abs/2608.03572v1)
+8. [通过迹映射构造实Morse化](https://arxiv.org/abs/2608.07212v1)
 
 ## AI 数学进展 — 前 3 项
 
-1. **[챗봇 넘어 'AI 연구원'으로…오픈AI, 수학 난제 10개 정복](https://www.hankookilbo.com/news/article/amp/A2026080310000002654)**
+1. **[数学与理论计算机科学的十项进展](https://www.hankookilbo.com/news/article/amp/A2026080310000002654)**
 
 ---
 
 # 调和分析简报
 
-## 1. Linear dependence of time-frequency shifts of a Schwartz function
+## 1. Schwartz函数时频平移的线性相关性
 
 **作者：** Markus Faulhuber、Philipp Petersen、Jordy Timo van Velthoven、Felix Voigtlaender
 **来源/事件：** [arXiv:2608.05044v1](https://arxiv.org/abs/2608.05044v1)，2026 年 8 月 5 日提交的新预印本。
@@ -53,7 +53,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 **来源过程与局限。** 手稿披露，GPT-5.6 Pro 在一段持续对话中生成了反例和证明策略。人类作者发起并引导搜索、提出改进、替换困难步骤、补足实质性缺口、发现并修复一个重要错误，并独立核验和重写最终证明；区间算术审计为数值部分提供了支持。[Terence Tao 的初步梳理](https://terrytao.wordpress.com/2026/08/06/a-partial-digestion-of-the-hrt-counterexample/)构成了知情的外部审视，但明确没有完成对整个证明的核验。该结果仍是未经同行评审的预印本。
 
-## 2. Counterexamples to Schiffer's Conjecture
+## 2. Schiffer猜想的反例
 
 **作者：** Gonzalo Cao-Labora、Jaume de Dios Pont
 **来源/事件：** [arXiv:2608.05114v1](https://arxiv.org/abs/2608.05114v1)，2026 年 8 月 5 日提交的新预印本。
@@ -63,7 +63,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 **评估与局限。** 该构造把一个长期刚性问题转化为灵活的分岔现象，并给出无穷族，而非单个例外区域。一项使用不同方法、但在本地报告窗口刚刚开始前发布的[计算机辅助构造](https://arxiv.org/abs/2608.01579v1)，支持这种广泛失效的结论，却并未独立核验本文的证明。入选来源是未经同行评审的第一版预印本，其分岔与正则性论证仍需专家审查。
 
-## 3. The Minimum Cardinality of a Dependent Finite Gabor System Is Four
+## 3. 线性相关有限Gabor系统的最小基数为四
 
 **作者：** Xinan Dai、Wenhao Deng、Yingdong Shi、Tailin Wu、Yuchen Yang
 **来源/事件：** [arXiv:2608.08190v1](https://arxiv.org/abs/2608.08190v1)，2026 年 8 月 8 日提交的新预印本。
@@ -73,7 +73,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 **评估与局限。** 该结果把本周 HRT 的主要进展从反例存在性推进到最小可能构型。证明结合了秩二 Zak 丛构造、受控的压缩线、不变绕数论证，以及有限的向外舍入区间证书。同一时期另一项四点构造在语义上重叠；入选手稿的尖锐最小性和证书仍未经同行评审，需要独立核验。
 
-## 4. The trace-free Beurling--Ahlfors transform and the Bourgain--Brezis problem for Hodge systems
+## 4. 无迹Beurling--Ahlfors变换与Hodge系统的Bourgain--Brezis问题
 
 **作者：** Diogo Arsénio
 **来源/事件：** [arXiv:2608.04237v1](https://arxiv.org/abs/2608.04237v1)，2026 年 8 月 4 日提交的新预印本。
@@ -83,7 +83,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 **评估与局限。** 这项工作为端点 Hodge 估计提出了可复用的算子论机制，把奇异积分的对称性与 Bourgain–Brezis 补偿联系起来。它并未声称对所有接近一的指数证明完整 Sobolev 猜想，且文中显示大多数相关有界选择必然是非线性的。覆盖所有维数的广泛结论目前只见于未经同行评审的第一版。
 
-## 5. Tilings, packings, and the existence of Schwartz-class Gabor windows
+## 5. 平铺、堆积与Schwartz类Gabor窗的存在性
 
 **作者：** Andrei Caragea、Mihail N. Kolountzakis、Götz Pfander
 **来源/事件：** [arXiv:2608.06679v1](https://arxiv.org/abs/2608.06679v1)，2026 年 8 月 6 日提交的新预印本；v2 更新在报告窗口结束后出现。
@@ -95,7 +95,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 # 一般数学简报
 
-## 1. The Mathieu group $M_{23}$ is a Galois group over $\mathbb{Q}$
+## 1. Mathieu群$M_{23}$是$\mathbb{Q}$上的Galois群
 
 **作者：** Xiaoyu Huang、Blake Jackson、Kyu-Hwan Lee、Bjorn Poonen、Rachel Pries、Shaowu Zhang
 **来源/事件：** [arXiv:2608.08538v1](https://arxiv.org/abs/2608.08538v1)，2026 年 8 月 9 日提交的新预印本。
@@ -105,7 +105,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 **评估与局限。** 该结果完成了一个始于 20 世纪 80 年代的计划：其余 25 个散在有限单群此前均已在 $\mathbb{Q}$ 上实现。显式多项式使主张格外具体，但 Belyi 映射计算与群认证仍需专家核验。来源是一篇十页、未经同行评审的预印本。
 
-## 2. The period-index conjecture is false
+## 2. 周期—指数猜想不成立
 
 **作者：** Alexander Perry
 **来源/事件：** [arXiv:2608.03684v1](https://arxiv.org/abs/2608.03684v1)，2026 年 8 月 4 日提交的新预印本。
@@ -115,7 +115,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 **评估与局限。** 若经核验，该结果将从三维起推翻标准的周期—指数猜想，而曲面情形不受影响。手稿披露，ChatGPT 曾建议一个最初有缺陷的构造，之后由作者修正和改进；这段来源过程既不能验证也不能否定最终论证。第一版预印本尚未经过独立同行评审。
 
-## 3. A solution to Morrey's problem in $\mathbb{R}^{2\times m}$
+## 3. $\mathbb{R}^{2\times m}$中Morrey问题的解
 
 **作者：** Gabriele Cassese
 **来源/事件：** [arXiv:2608.03488v1](https://arxiv.org/abs/2608.03488v1)，2026 年 8 月 4 日提交的新预印本。
@@ -127,7 +127,7 @@ Model: CodeX-GPT5.6-sol-ultra-fast
 
 # AI 数学进展简报
 
-## 1. 챗봇 넘어 'AI 연구원'으로…오픈AI, 수학 난제 10개 정복
+## 1. 数学与理论计算机科学的十项进展
 
 **来源/事件：** [Hankook Ilbo](https://www.hankookilbo.com/news/article/amp/A2026080310000002654)，2026 年 8 月 3 日发布的独立报道；此前 OpenAI 技术报告于 8 月 1 日发布，并在 8 月 6 日进行了实质更新。
 **技术来源：** [OpenAI 概览](https://openai.com/index/ten-advances-in-mathematics/)、[技术手稿](https://cdn.openai.com/pdf/ten-proofs-oai.pdf)及 [Lean 仓库](https://github.com/openai/ten-proofs)。
