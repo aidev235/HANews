@@ -1,0 +1,783 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-26T160843-0500-cefa04",
+  "project": "HANews",
+  "started_at": "2026-08-26T16:08:43-0500",
+  "finished_at": "2026-08-26T22:00:11-0500",
+  "duration_seconds": 21088,
+  "published_at": null,
+  "timezone": "America/Chicago",
+  "reporting_window": {
+    "start": "2026-08-17",
+    "end": "2026-08-23",
+    "iso_year": 2026,
+    "iso_week": 34
+  },
+  "trigger": "manual",
+  "models": [
+    {
+      "type": "requested",
+      "identifier": "CodeX-GPT5.6-sol-ultra"
+    },
+    {
+      "type": "runtime",
+      "identifier": "unavailable"
+    }
+  ],
+  "sources": [
+    {
+      "name": "arXiv API exact-window mathematics census",
+      "kind": "primary_index",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "success",
+      "outcome": "Enumerated 1,491 mathematics submissions in the exact America/Chicago window converted to 2026-08-17T05:00Z through 2026-08-24T04:59Z and supplied primary metadata for normalization.",
+      "retrieved_at": "2026-08-26T16:18:00-05:00"
+    },
+    {
+      "name": "arXiv OAI records and version histories",
+      "kind": "primary_metadata",
+      "url": "https://export.arxiv.org/oai2",
+      "status": "success",
+      "outcome": "Screened 773 HA-adjacent records and distinguished original submissions from material in-window revisions before scope assessment.",
+      "retrieved_at": "2026-08-26T16:18:00-05:00"
+    },
+    {
+      "name": "Primary mathematical manuscripts and authoritative records",
+      "kind": "primary_and_authoritative_verification",
+      "status": "success",
+      "outcome": "Checked all 57 plausible unique candidates against arXiv manuscripts, DOI or publisher records, author and institute pages, official repositories, and inspectable certificates as available.",
+      "retrieved_at": "2026-08-26T16:18:00-05:00"
+    },
+    {
+      "name": "Axiom bounded-prime-gaps formalization and independent coverage",
+      "kind": "ai_math_technical_and_news",
+      "urls": [
+        "https://primegaps.axiommath.ai/",
+        "https://spectrum.ieee.org/axiom-math-246-theorem-formalization"
+      ],
+      "status": "success",
+      "outcome": "Verified the formal artifact, disclosed mixed human/AI workflow, and qualifying in-window IEEE Spectrum coverage.",
+      "retrieved_at": "2026-08-26T16:15:05-05:00"
+    },
+    {
+      "name": "ICARM elliptic-rank records and institute coverage",
+      "kind": "ai_math_technical_and_authoritative_news",
+      "urls": [
+        "https://elliptic-rank.icarm.cloud/curve/273",
+        "https://elliptic-rank.icarm.cloud/curve/302",
+        "https://icarm.io/news/new-record-breaking-elliptic-curve-reported/"
+      ],
+      "status": "success",
+      "outcome": "Verified explicit rank-at-least-30 and rank-at-least-31 witnesses, ICARM validation policy, event chronology, and qualifying in-window coverage for the linked record cluster.",
+      "retrieved_at": "2026-08-26T16:15:05-05:00"
+    },
+    {
+      "name": "Targeted web, news, author-page, and repository discovery",
+      "kind": "secondary_discovery_and_corroboration",
+      "status": "partial",
+      "outcome": "Supplied independent context and corroboration for plausible candidates; weak, marketing-led, unsigned, or insufficiently inspectable claims were retained only as nonselected or verification-pending evidence.",
+      "retrieved_at": "2026-08-26T16:18:00-05:00"
+    }
+  ],
+  "statistics": {
+    "raw_candidates": 1491,
+    "normalized_candidates": 1491,
+    "deduplicated_candidates": 1491,
+    "candidate_count_scope": "Raw, normalized, and deduplicated counts describe the exact-window arXiv mathematics census; revision feeds and external AI-math events were assessed separately and are included in the plausible-candidate knowledge base.",
+    "ha_adjacent_screen": 773,
+    "plausible_unique": 57,
+    "ha_candidates": 25,
+    "general_candidates": 27,
+    "ai_math_candidates": 5,
+    "source_query_outcomes": {
+      "success": 5,
+      "partial": 1,
+      "failed": 0
+    },
+    "selected": {
+      "ha": 20,
+      "general": 8,
+      "ai_math": 2,
+      "total": 30
+    },
+    "overviews": {
+      "ha": 20,
+      "general": 0,
+      "ai_math": 0,
+      "total": 20
+    },
+    "detailed": {
+      "ha": 6,
+      "general": 3,
+      "ai_math": 2,
+      "total": 11
+    }
+  },
+  "ranking_audit": [
+    {
+      "candidate_id": "HA-001",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 1,
+      "title_en": "Linear dependence of time-frequency shifts of a Schwartz function",
+      "title_zh": "Schwartz 函数时频平移的线性相关性",
+      "expected_report_link": "https://arxiv.org/abs/2608.05044v2",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Ranked first because the in-window revision materially strengthens a central HA counterexample with a nonnumerical existence proof."
+    },
+    {
+      "candidate_id": "HA-002",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 2,
+      "title_en": "A dimension-free weak-type $(1,1)$ bound for the vector Riesz transform on $\\mathbb{R}^n$",
+      "title_zh": "$\\mathbb{R}^n$ 上向量 Riesz 变换的无维数弱 $(1,1)$ 型界",
+      "expected_report_link": "https://arxiv.org/abs/2608.18068v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A longstanding endpoint problem is resolved with an absolute quantitative constant and a new method."
+    },
+    {
+      "candidate_id": "HA-003",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 3,
+      "title_en": "Endpoint orthonormal Strichartz estimates",
+      "title_zh": "端点正交归一 Strichartz 估计",
+      "expected_report_link": "https://arxiv.org/abs/2608.21823v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected near the top for closing named endpoint conjectures in an unusually general framework."
+    },
+    {
+      "candidate_id": "HA-004",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 4,
+      "title_en": "Mixed-norm Brascamp--Lieb inequalities",
+      "title_zh": "混合范数 Brascamp–Lieb 不等式",
+      "expected_report_link": "https://arxiv.org/abs/2608.17952v2",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A foundational-looking new inequality framework with direct restriction and Kakeya relevance."
+    },
+    {
+      "candidate_id": "HA-005",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 5,
+      "title_en": "Sharp Bilinear Decoupling under Shell-Type Restrictions and Applications",
+      "title_zh": "壳型限制下的尖锐双线性解耦及其应用",
+      "expected_report_link": "https://arxiv.org/abs/2608.19531v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A core decoupling advance with a sharp regime change and several concrete HA/PDE consequences."
+    },
+    {
+      "candidate_id": "HA-006",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 6,
+      "title_en": "Global solutions for 1D cubic defocusing dispersive equations, Part V: low regularity NLS",
+      "title_zh": "一维三次散焦色散方程的整体解，第五部分：低正则性 NLS",
+      "expected_report_link": "https://arxiv.org/abs/2608.17156v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A robust near-critical global theory for a broad nonintegrable dispersive class."
+    },
+    {
+      "candidate_id": "HA-007",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 7,
+      "title_en": "$L^p$-Estimates for maximal averages along mixed homogeneous hypersurfaces in $\\mathbb{R}^3$",
+      "title_zh": "$\\mathbb{R}^3$ 中混合齐次超曲面上极大平均算子的 $L^p$ 估计",
+      "expected_report_link": "https://arxiv.org/abs/2608.22012v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A broad critical-exponent theorem for geometrically degenerate maximal averages."
+    },
+    {
+      "candidate_id": "HA-008",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 8,
+      "title_en": "Positive measure for restricted projections along smooth non-degenerate curves",
+      "title_zh": "沿光滑非退化曲线的受限投影具有正测度",
+      "expected_report_link": "https://arxiv.org/abs/2608.21822v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A strong restricted-projection theorem in all admissible dimensions."
+    },
+    {
+      "candidate_id": "HA-009",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 9,
+      "title_en": "Boundary-Weighted Fourier Inequalities for Convex Domains",
+      "title_zh": "凸域上的边界加权 Fourier 不等式",
+      "expected_report_link": "https://arxiv.org/abs/2608.19806v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A sharp convex-frequency-domain theory with unusually direct restriction/Kakeya implications."
+    },
+    {
+      "candidate_id": "HA-010",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 10,
+      "title_en": "Almost sure pointwise convergence for the 2D periodic quintic NLS",
+      "title_zh": "二维周期五次 NLS 的几乎处处逐点收敛",
+      "expected_report_link": "https://arxiv.org/abs/2608.17100v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A substantial probabilistic threshold improvement for a nonlinear Carleson problem."
+    },
+    {
+      "candidate_id": "HA-011",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 11,
+      "title_en": "Bourgain's condition, sticky Kakeya, and new examples",
+      "title_zh": "Bourgain 条件、黏性 Kakeya 与新例子",
+      "expected_report_link": "https://arxiv.org/abs/2511.10918v4",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 5,
+        "research_interest": 5,
+        "confidence": 5
+      },
+      "selection_rationale": "A material accepted revision on a central curved-Kakeya mechanism."
+    },
+    {
+      "candidate_id": "HA-012",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 12,
+      "title_en": "High-dimensional discrete 1-symmetric convex bodies and dimension-free estimates for maximal functions",
+      "title_zh": "高维离散 1-对称凸体与极大函数的无维数估计",
+      "expected_report_link": "https://arxiv.org/abs/2608.17302v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A broad dimension-free theorem paired with a meaningful symmetry counterexample."
+    },
+    {
+      "candidate_id": "HA-013",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 13,
+      "title_en": "Cellular Maximal-Density Factoring and a Repair of the Streamlined Three-Dimensional Kakeya Reduction",
+      "title_zh": "细胞极大密度分解与三维 Kakeya 简化归约的修补",
+      "expected_report_link": "https://arxiv.org/abs/2608.18870v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "Potentially consequential proof-integrity work, ranked below new theorems pending specialist verification."
+    },
+    {
+      "candidate_id": "HA-014",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 14,
+      "title_en": "Complexity-sensitive additive energy and off-diagonal Young inequalities on bounded-degree algebraic varieties",
+      "title_zh": "有界次数代数簇上的复杂度敏感加性能量与非对角 Young 不等式",
+      "expected_report_link": "https://arxiv.org/abs/2608.18956v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "A technically rich new bridge between algebraic additive structure and restriction estimates."
+    },
+    {
+      "candidate_id": "HA-015",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 15,
+      "title_en": "Anisotropic Bourgain--Brezis inequalities",
+      "title_zh": "各向异性 Bourgain–Brezis 不等式",
+      "expected_report_link": "https://arxiv.org/abs/2608.21135v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 3
+      },
+      "selection_rationale": "A core endpoint/cancellation result with a substantial proof, despite limited high-level source detail."
+    },
+    {
+      "candidate_id": "HA-016",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 16,
+      "title_en": "On the prime field spherical restriction conjecture in four dimensions: breaking the Stein--Tomas exponent and applications",
+      "title_zh": "四维素域球面限制猜想：突破 Stein–Tomas 指数及其应用",
+      "expected_report_link": "https://arxiv.org/abs/2606.03627v3",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A material finite-field restriction revision with a new localized theory and applications."
+    },
+    {
+      "candidate_id": "HA-017",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 17,
+      "title_en": "Universal admissibility for scattering transforms",
+      "title_zh": "散射变换的普适可容许性",
+      "expected_report_link": "https://arxiv.org/abs/2608.18064v1",
+      "scores": {
+        "relevance": 4,
+        "importance": 4,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Resolves a named admissibility issue and sharply identifies the attainable depth-decay scale."
+    },
+    {
+      "candidate_id": "HA-018",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 18,
+      "title_en": "Uniform weak type $(1,1)$ bounds for Riesz transforms on stratified Lie groups",
+      "title_zh": "分层 Lie 群上 Riesz 变换的一致弱 $(1,1)$ 型界",
+      "expected_report_link": "https://arxiv.org/abs/2608.20267v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "A striking universal-constant extension across all stratified Lie groups."
+    },
+    {
+      "candidate_id": "HA-019",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 19,
+      "title_en": "Critical two-depth Journé packing for bi-parameter and Zygmund rectangles",
+      "title_zh": "双参数与 Zygmund 矩形的临界双深度 Journé 装填",
+      "expected_report_link": "https://arxiv.org/abs/2608.22628v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "A sharp endpoint refinement of a central multiparameter tool."
+    },
+    {
+      "candidate_id": "HA-020",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 20,
+      "title_en": "Time-Decay Estimates for Two-Dimensional Fourth-Order Schrödinger Operators with Threshold Singularities",
+      "title_zh": "具有阈值奇性的二维四阶 Schrödinger 算子的时间衰减估计",
+      "expected_report_link": "https://arxiv.org/abs/2608.18916v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 3
+      },
+      "selection_rationale": "A broad threshold-resonance decay classification with sharp lower behavior."
+    },
+    {
+      "candidate_id": "2608.19189",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 1,
+      "title_en": "Entry growth in Gaussian elimination",
+      "title_zh": "高斯消元中的元素增长",
+      "expected_report_link": "https://arxiv.org/abs/2608.19189v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Ranked first for resolving several long-standing stability questions with broad theoretical and algorithmic consequences."
+    },
+    {
+      "candidate_id": "2608.18074",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 2,
+      "title_en": "On Chern's conjecture for minimal submanifolds of the sphere",
+      "title_zh": "关于球面中极小子流形的 Chern 猜想",
+      "expected_report_link": "https://arxiv.org/abs/2608.18074v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A compact explicit counterexample family to a famous geometric discreteness conjecture."
+    },
+    {
+      "candidate_id": "2608.18257",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 3,
+      "title_en": "Banach's Isometric Conjecture over the Complex Field",
+      "title_zh": "复数域上的 Banach 等距猜想",
+      "expected_report_link": "https://arxiv.org/abs/2608.18257v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for extending a classical theorem to the complex and quaternionic settings with broad geometric consequences."
+    },
+    {
+      "candidate_id": "2608.18053",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 4,
+      "title_en": "A Complete Classification of Complex Hadamard Matrices of Order Six",
+      "title_zh": "六阶复 Hadamard 矩阵的完整分类",
+      "expected_report_link": "https://arxiv.org/abs/2608.18053v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A decades-open classification claim supported by substantial formal and computational evidence."
+    },
+    {
+      "candidate_id": "2608.17891",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 5,
+      "title_en": "Thompson's Conjecture for Finite Simple Groups of Lie Type over Small Fields",
+      "title_zh": "小有限域上 Lie 型有限单群的 Thompson 猜想",
+      "expected_report_link": "https://arxiv.org/abs/2608.17891v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Completes a long finite-group program by resolving its known residual families."
+    },
+    {
+      "candidate_id": "2608.20899",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 6,
+      "title_en": "Concentration phenomena and the Vanishing Mass Conjecture",
+      "title_zh": "集中现象与消失质量猜想",
+      "expected_report_link": "https://arxiv.org/abs/2608.20899v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A broad structural resolution of a 2003 conjecture with several downstream applications."
+    },
+    {
+      "candidate_id": "2608.20216",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 7,
+      "title_en": "Sharp Summability of Nevanlinna Defects for Finite-Lower-Order Holomorphic Curves",
+      "title_zh": "有限下级全纯曲线的 Nevanlinna 亏量的尖锐可和性",
+      "expected_report_link": "https://arxiv.org/abs/2608.20216v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 3,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A sharp endpoint resolution in classical value-distribution theory."
+    },
+    {
+      "candidate_id": "2608.17350",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 8,
+      "title_en": "A 15/31 Counterexample Family to the Albertson-Berman Conjecture",
+      "title_zh": "Albertson–Berman 猜想的一族 15/31 反例",
+      "expected_report_link": "https://arxiv.org/abs/2608.17350v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 5
+      },
+      "selection_rationale": "An explicit, reproducible disproof of a 47-year-old conjecture."
+    },
+    {
+      "candidate_id": "AI-2026W34-AXIOM-PRIME-GAPS-246",
+      "list": "ai_math",
+      "status": "selected-ai-math",
+      "rank": 1,
+      "title_en": "Lean formalization of bounded gaps between primes",
+      "title_zh": "有界素数间隙的 Lean 形式化",
+      "expected_report_link": "https://spectrum.ieee.org/axiom-math-246-theorem-formalization",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "The strongest AI-math item because it combines inspectable formal evidence, a disclosed mixed human/AI workflow, and reputable in-window coverage."
+    },
+    {
+      "candidate_id": "AI-2026W34-ELLIPTIC-RANK-30-31",
+      "list": "ai_math",
+      "status": "selected-ai-math",
+      "rank": 2,
+      "title_en": "Elliptic curves over $\\mathbb{Q}$ of rank at least 30 and 31",
+      "title_zh": "秩至少为 30 和 31 的 $\\mathbb{Q}$ 上椭圆曲线",
+      "expected_report_link": "https://icarm.io/news/new-record-breaking-elliptic-curve-reported/",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "A genuine new mathematical record with explicit witnesses and authoritative in-window coverage, treated as one tightly linked event cluster."
+    }
+  ],
+  "outputs": {
+    "english_report": "latest-week.md",
+    "chinese_report": "latest-week-zh.md",
+    "english_archive": "archive/2026Week34.md",
+    "chinese_archive": "archive/2026Week34-zh.md",
+    "knowledge_base": "knowledge-base/2026Week34.md"
+  },
+  "validation": {
+    "status": "success",
+    "checks": {
+      "reporting_window_and_paths": {
+        "status": "pass",
+        "detail": "2026-08-17 through 2026-08-23 America/Chicago, ISO 2026-W34, with deterministic archive and knowledge-base paths."
+      },
+      "selected_event_dates": {
+        "status": "pass",
+        "detail": "All 30 selected events were individually normalized to America/Chicago and fall inside the reporting window."
+      },
+      "candidate_knowledge_base": {
+        "status": "pass",
+        "detail": "57 plausible unique candidates are present; all 19 required fields occur in every candidate block."
+      },
+      "selection_caps_and_order": {
+        "status": "pass",
+        "detail": "Selected HA/general/AI counts are 20/8/2, with unique ranks and no duplicated selected candidate IDs."
+      },
+      "ha_overviews": {
+        "status": "pass",
+        "detail": "All 20 selected HA entries have substantive overviews in both English and Chinese."
+      },
+      "detailed_treatment": {
+        "status": "pass",
+        "detail": "HA details are exactly ranks 1-6; general details are ranks 1-3; AI details are ranks 1-2."
+      },
+      "bold_positions": {
+        "status": "pass",
+        "detail": "Only detailed entries are bold in each index: HA 1-6, general 1-3, and AI 1-2, identically in both languages."
+      },
+      "knowledge_base_json_consistency": {
+        "status": "pass",
+        "detail": "All 30 audit records match knowledge-base ID, list status, rank, both titles, expected link, seven scores, and selection rationale."
+      },
+      "json_report_consistency": {
+        "status": "pass",
+        "detail": "JSON ranking audit matches English and Chinese index rank, title, and URL for every selected candidate."
+      },
+      "bilingual_parity": {
+        "status": "pass",
+        "detail": "English and Chinese reports have identical selected sets, rank order, bold positions, detailed-treatment structure, and ordered URL sequence."
+      },
+      "chinese_title_translation": {
+        "status": "pass",
+        "detail": "Every Chinese index and detail heading uses the corresponding knowledge-base Chinese title."
+      },
+      "report_links": {
+        "status": "pass",
+        "detail": "All 36 unique URLs used by the reports returned HTTP 200 during parallel validation."
+      },
+      "archives": {
+        "status": "pass",
+        "detail": "Both Week 34 archives are byte-identical to their finalized latest reports."
+      },
+      "json_schema_and_syntax": {
+        "status": "pass",
+        "detail": "The run log is valid JSON, schema_version is 1, and ranking_audit contains 30 records."
+      },
+      "secret_scan": {
+        "status": "pass",
+        "detail": "No credential or private-key patterns were found in issue artifacts."
+      },
+      "whitespace_and_diff_check": {
+        "status": "pass",
+        "detail": "No trailing whitespace remains and git diff --check passes for tracked issue files."
+      }
+    }
+  },
+  "warnings": [
+    "The requested model identifier is preserved exactly, but no separate runtime model identifier was exposed.",
+    "Most selected mathematical results are recent unrefereed preprints; mathematical claims were source-checked but proofs were not independently re-proved.",
+    "The raw, normalized, and deduplicated counts refer to the exact-window arXiv mathematics census; older-ID revisions and external AI-math events were assessed separately.",
+    "AI-assisted provenance, interested-party evidence, and incomplete workflow disclosure are explicitly caveated item by item.",
+    "Pre-existing uncommitted Prompt.md and README.md changes are outside this run and will not be included in its commits.",
+    "Publication metadata remains pending until the Git push attempt."
+  ],
+  "errors": [],
+  "git": {
+    "branch": "main",
+    "base_commit": "2af3e4e4af83bd1e6f81012808075e024e96141f",
+    "commit_message": "report: generate HANews 2026 Week 34 [run:2026-08-26T160843-0500-cefa04]",
+    "push": {
+      "status": "pending"
+    },
+    "push_outcome": "pending"
+  },
+  "status": "success"
+}
