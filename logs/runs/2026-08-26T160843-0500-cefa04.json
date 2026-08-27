@@ -5,7 +5,7 @@
   "started_at": "2026-08-26T16:08:43-0500",
   "finished_at": "2026-08-26T22:00:11-0500",
   "duration_seconds": 21088,
-  "published_at": null,
+  "published_at": "2026-08-26T22:02:47-0500",
   "timezone": "America/Chicago",
   "reporting_window": {
     "start": "2026-08-17",
@@ -767,17 +767,24 @@
     "The raw, normalized, and deduplicated counts refer to the exact-window arXiv mathematics census; older-ID revisions and external AI-math events were assessed separately.",
     "AI-assisted provenance, interested-party evidence, and incomplete workflow disclosure are explicitly caveated item by item.",
     "Pre-existing uncommitted Prompt.md and README.md changes are outside this run and will not be included in its commits.",
-    "Publication metadata remains pending until the Git push attempt."
+    "The report commit was published successfully; this JSON update is persisted in the required follow-up metadata commit."
   ],
   "errors": [],
   "git": {
     "branch": "main",
     "base_commit": "2af3e4e4af83bd1e6f81012808075e024e96141f",
     "commit_message": "report: generate HANews 2026 Week 34 [run:2026-08-26T160843-0500-cefa04]",
+    "report_commit": "13050b303ffdb7b50f23254dbdde3ac1ee6c1a00",
+    "remote": "origin",
     "push": {
-      "status": "pending"
+      "status": "success",
+      "attempted_at": "2026-08-26T22:02:47-0500",
+      "branch": "main",
+      "remote_before": "2af3e4e4af83bd1e6f81012808075e024e96141f",
+      "remote_after": "13050b303ffdb7b50f23254dbdde3ac1ee6c1a00",
+      "outcome": "main -> main"
     },
-    "push_outcome": "pending"
+    "push_outcome": "success main->main"
   },
   "status": "success"
 }
