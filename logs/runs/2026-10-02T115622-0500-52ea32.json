@@ -1,0 +1,1050 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-10-02T115622-0500-52ea32",
+  "project": "HANews",
+  "started_at": "2026-10-02T11:56:22-05:00",
+  "finished_at": "2026-10-02T16:02:04-05:00",
+  "published_at": null,
+  "timezone": "America/Chicago",
+  "reporting_window": {
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "iso_year": 2026,
+    "iso_week": 39
+  },
+  "trigger": "manual: read Prompt and do",
+  "models": [
+    {
+      "type": "requested",
+      "identifier": "unavailable"
+    },
+    {
+      "type": "runtime",
+      "identifier": "unavailable"
+    }
+  ],
+  "sources": [
+    {
+      "name": "arXiv mathematics submission API",
+      "scope": "2026-09-21 00:00 CDT through 2026-09-27 23:59 CDT",
+      "outcome": "success",
+      "records": 2190,
+      "notes": "Two pages; UTC boundaries 202609210500–202609280459."
+    },
+    {
+      "name": "arXiv math.CA last-update query",
+      "scope": "targeted revision check",
+      "outcome": "partial",
+      "records": 89,
+      "notes": "No additional older-submission candidate found; not an exhaustive all-category revision census."
+    },
+    {
+      "name": "arXiv primary records and selected manuscripts",
+      "scope": "64 plausible candidates; selected full texts",
+      "outcome": "success",
+      "records": 64,
+      "notes": "Version histories and primary v1 evidence inspected; proof correctness not independently certified."
+    },
+    {
+      "name": "Targeted web and news searches",
+      "scope": "HA, general mathematics, AI mathematics, institute events",
+      "outcome": "partial",
+      "notes": "Discovery and corroboration; search noise discarded and some publisher pages were robot-restricted."
+    },
+    {
+      "name": "Quanta update",
+      "scope": "AI monotile coverage",
+      "outcome": "success",
+      "records": 1,
+      "notes": "Requested update URL resolved to the permanent transformation article anchor."
+    },
+    {
+      "name": "AI repository evidence",
+      "scope": "two pending formalization candidates",
+      "outcome": "partial",
+      "records": 2,
+      "notes": "README and dated logs inspected; builds and proposition fidelity not independently rerun."
+    }
+  ],
+  "statistics": {
+    "raw_arxiv_records": 2190,
+    "normalized_candidates": 2190,
+    "deduplicated_candidates": 2190,
+    "plausible_normalized_candidates": 64,
+    "external_or_separately_assessed_candidates": 8,
+    "ha_relevant_candidates": 43,
+    "general_candidates": 16,
+    "ai_math_candidates": 5,
+    "selected": {
+      "ha": 20,
+      "general": 8,
+      "ai_math": 1,
+      "total": 29
+    },
+    "overviews": {
+      "ha": 20,
+      "general": 0,
+      "ai_math": 0
+    },
+    "detailed_treatments": {
+      "ha": 6,
+      "general": 3,
+      "ai_math": 1,
+      "total": 10
+    },
+    "report_link_occurrences": 45,
+    "distinct_report_urls_checked": 35
+  },
+  "ranking_audit": [
+    {
+      "candidate_id": "2609.28311",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 1,
+      "title_en": "Sharp Higher Integrability Theory, Part I: The $L^p$-norm of the Beurling--Ahlfors transform",
+      "title_zh": "尖锐高可积性理论，第一部分：Beurling–Ahlfors 变换的 $L^p$ 范数",
+      "expected_report_link": "https://arxiv.org/abs/2609.28311v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "First for its exact norm in a central singular-integral conjecture and the variational mechanism behind it.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-23T10:55:17-05:00"
+    },
+    {
+      "candidate_id": "2609.27023",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 2,
+      "title_en": "A Szemerédi-Trotter Theorem in Arbitrary Fields",
+      "title_zh": "任意域上的 Szemerédi–Trotter 定理",
+      "expected_report_link": "https://arxiv.org/abs/2609.27023v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Second for the sharp incidence exponent and direct finite-field restriction consequences; only the in-week version is ranked.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-22T15:08:03-05:00"
+    },
+    {
+      "candidate_id": "2609.24135",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 3,
+      "title_en": "Establishing the Polynomial Wolff Axioms for $\\delta$-Separated $\\delta$-Tubes With #o-minimality",
+      "title_zh": "利用 #o-极小性建立方向 $\\delta$-分离的 $\\delta$-管的多项式 Wolff 公理",
+      "expected_report_link": "https://arxiv.org/abs/2609.24135v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Third for removing the epsilon loss in a core Kakeya non-concentration input with quantitative complexity control.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-21T00:41:33-05:00"
+    },
+    {
+      "candidate_id": "2609.32421",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 4,
+      "title_en": "Sharp $L^p$ estimates for the strong spherical maximal operator",
+      "title_zh": "强球面极大算子的尖锐 $L^p$ 估计",
+      "expected_report_link": "https://arxiv.org/abs/2609.32421v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "Fourth for completing the stated strong spherical maximal range; preliminary AI-assisted proof status tempers confidence.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-26T04:48:18-05:00"
+    },
+    {
+      "candidate_id": "2609.32090",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 5,
+      "title_en": "Sharp lower bounds for the periodic maximal Schrödinger operator in higher dimensions",
+      "title_zh": "高维周期 Schrödinger 极大算子的尖锐下界",
+      "expected_report_link": "https://arxiv.org/abs/2609.32090v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "Fifth for the sharp periodic convergence threshold and new arithmetic construction; the critical endpoint remains open.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T18:54:46-05:00"
+    },
+    {
+      "candidate_id": "2609.25401",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 6,
+      "title_en": "The Solution to Agmon's Conjecture for the polylaplacian",
+      "title_zh": "多重 Laplace 算子的 Agmon 猜想的解",
+      "expected_report_link": "https://arxiv.org/abs/2609.25401v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Sixth for the new higher-order layer-potential machinery across dimensions, subject to explicit boundary hypotheses.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-21T15:43:26-05:00"
+    },
+    {
+      "candidate_id": "2609.29882",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 7,
+      "title_en": "Sharp endpoint extension inequalities for the moment curve on finite fields II: an extremal property of the uniform distribution",
+      "title_zh": "有限域上矩曲线的尖锐端点延拓不等式 II：均匀分布的极值性质",
+      "expected_report_link": "https://arxiv.org/abs/2609.29882v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for exact constants and all equality cases in a finite-field endpoint extension problem.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-24T09:33:53-05:00"
+    },
+    {
+      "candidate_id": "2609.27045",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 8,
+      "title_en": "On $C^k$ convex variants of Stein's Weighted $L^2$ Conjecture for Bochner-Riesz means",
+      "title_zh": "Stein 关于 Bochner–Riesz 平均的加权 $L^2$ 猜想的 $C^k$ 凸体变体",
+      "expected_report_link": "https://arxiv.org/abs/2609.27045v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for counterexamples clarifying which geometric weighted multiplier conjectures can hold.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-22T15:39:57-05:00"
+    },
+    {
+      "candidate_id": "2609.33949",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 9,
+      "title_en": "An improved high-low method for the parabola",
+      "title_zh": "抛物线的一种改进的高低频方法",
+      "expected_report_link": "https://arxiv.org/abs/2609.33949v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 3,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a reusable improvement of the high-low proof method, without claiming new numerical exponents.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-27T16:44:40-05:00"
+    },
+    {
+      "candidate_id": "2609.32919",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 10,
+      "title_en": "Mollified disc multipliers",
+      "title_zh": "经磨光的圆盘乘子",
+      "expected_report_link": "https://arxiv.org/abs/2609.32919v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for sharp logarithmic endpoint growth of planar disc regularizations.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-26T15:11:36-05:00"
+    },
+    {
+      "candidate_id": "2609.30228",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 11,
+      "title_en": "Global well-posedness and scattering for the three-dimensional focusing energy-critical NLS",
+      "title_zh": "三维聚焦能量临界 NLS 的整体适定性与散射",
+      "expected_report_link": "https://arxiv.org/abs/2609.30228v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 3
+      },
+      "selection_rationale": "Selected for the claimed full subthreshold focusing NLS result in the natural homogeneous energy space.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-24T12:51:01-05:00"
+    },
+    {
+      "candidate_id": "2609.31493",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 12,
+      "title_en": "Sharp weighted weak-type bounds for commutators of singular integrals",
+      "title_zh": "奇异积分交换子的尖锐加权弱型界",
+      "expected_report_link": "https://arxiv.org/abs/2609.31493v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for optimal weight powers and a meaningful distinction between generic and logarithmic BMO symbols.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T11:34:10-05:00"
+    },
+    {
+      "candidate_id": "2609.28088",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 13,
+      "title_en": "Complex median method",
+      "title_zh": "复中位数方法",
+      "expected_report_link": "https://arxiv.org/abs/2609.28088v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a method removing a real-valued-symbol obstruction in commutator necessity.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-23T08:24:51-05:00"
+    },
+    {
+      "candidate_id": "2609.30961",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 14,
+      "title_en": "Rough spectral asymptotics for commutators of general singular integrals",
+      "title_zh": "一般奇异积分交换子的粗谱渐近",
+      "expected_report_link": "https://arxiv.org/abs/2609.30961v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for extending spectral asymptotic control to general singular integrals, with the liminf/limsup limitation explicit.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T03:13:04-05:00"
+    },
+    {
+      "candidate_id": "2609.31334",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 15,
+      "title_en": "Formalizing Carleson's Theorem in Lean",
+      "title_zh": "在 Lean 中形式化 Carleson 定理",
+      "expected_report_link": "https://arxiv.org/abs/2609.31334v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 3,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected as a substantial HA formalization exposition and reusable verification infrastructure, not as autonomous AI discovery.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T09:39:36-05:00"
+    },
+    {
+      "candidate_id": "2609.33560",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 16,
+      "title_en": "Sharp Matrix $\\mathcal A_p$ lower bounds for general non-degenerate convolution Calderón--Zygmund operators",
+      "title_zh": "一般非退化卷积 Calderón–Zygmund 算子的尖锐矩阵 $\\mathcal A_p$ 下界",
+      "expected_report_link": "https://arxiv.org/abs/2609.33560v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a general sharp matrix-weight obstruction and precise matrix-dimension hypotheses.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-27T08:33:51-05:00"
+    },
+    {
+      "candidate_id": "2609.28332",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 17,
+      "title_en": "Besicovitch Compression and a Quantitative Failure of Endpoint Fourier Restriction",
+      "title_zh": "Besicovitch 压缩与端点 Fourier 限制估计的定量失效",
+      "expected_report_link": "https://arxiv.org/abs/2609.28332v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for deterministic quantitative endpoint failure rather than merely qualitative obstruction.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-23T11:10:52-05:00"
+    },
+    {
+      "candidate_id": "2609.29301",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 18,
+      "title_en": "Absolute continuity and dimension conservation for self-similar sets and measures",
+      "title_zh": "自相似集与测度的绝对连续性及维数守恒",
+      "expected_report_link": "https://arxiv.org/abs/2609.29301v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for all-direction projection consequences without a uniform spectral gap; constrained to in-week hypotheses.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-24T04:35:57-05:00"
+    },
+    {
+      "candidate_id": "2609.24930",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 19,
+      "title_en": "Infinite cascades for the defocusing cubic half-wave equation on the torus",
+      "title_zh": "环面上散焦三次半波方程的无限级联",
+      "expected_report_link": "https://arxiv.org/abs/2609.24930v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for an explicit sustained high-frequency cascade in a defocusing periodic dispersive model.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-21T12:25:59-05:00"
+    },
+    {
+      "candidate_id": "2609.33557",
+      "list": "ha",
+      "status": "selected-ha",
+      "rank": 20,
+      "title_en": "Favard length of non-homogeneous random disc-like Cantor sets",
+      "title_zh": "非齐次随机类圆盘 Cantor 集的 Favard 长度",
+      "expected_report_link": "https://arxiv.org/abs/2609.33557v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for sharpness examples across the full range of capacity-based projection decay.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-27T08:29:42-05:00"
+    },
+    {
+      "candidate_id": "2609.30194",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 1,
+      "title_en": "Stable solutions of the Allen--Cahn equation in dimension three are one-dimensional",
+      "title_zh": "三维 Allen–Cahn 方程的稳定解是一维的",
+      "expected_report_link": "https://arxiv.org/abs/2609.30194v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "First general item for a central stability classification and four-dimensional corollary, with earlier independent provenance stated.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-24T12:34:08-05:00"
+    },
+    {
+      "candidate_id": "2609.32651",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 2,
+      "title_en": "Semifields in prime dimensions and counterexamples to Kaplansky's conjecture",
+      "title_zh": "素数维数的半域与 Kaplansky 猜想的反例",
+      "expected_report_link": "https://arxiv.org/abs/2609.32651v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 4
+      },
+      "selection_rationale": "Second general item for an explicit infinite counterexample family to a longstanding finite-algebra classification.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-26T09:09:59-05:00"
+    },
+    {
+      "candidate_id": "2609.24184",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 3,
+      "title_en": "Dictators are most informative",
+      "title_zh": "独裁函数保留的信息最多",
+      "expected_report_link": "https://arxiv.org/abs/2609.24184v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 5,
+        "novelty": 5,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 5,
+        "confidence": 3
+      },
+      "selection_rationale": "Third general item for the universal Boolean-information conjecture; independent proof and stability work are grouped.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-21T01:56:11-05:00"
+    },
+    {
+      "candidate_id": "2609.25462",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 4,
+      "title_en": "Sharper Bounds for the Complex Grothendieck Constant",
+      "title_zh": "复 Grothendieck 常数的更精确界",
+      "expected_report_link": "https://arxiv.org/abs/2609.25462v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for simultaneous quantitative progress on both sides of a central functional-analytic constant.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-21T17:38:08-05:00"
+    },
+    {
+      "candidate_id": "2609.30921",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 5,
+      "title_en": "Counterexamples to the inhomogeneous Duffin-Schaeffer Conjecture",
+      "title_zh": "非齐次 Duffin–Schaeffer 猜想的反例",
+      "expected_report_link": "https://arxiv.org/abs/2609.30921v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected as the representative of two overlapping inhomogeneous approximation counterexample papers; companion provenance is retained.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T02:36:36-05:00"
+    },
+    {
+      "candidate_id": "2609.24392",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 6,
+      "title_en": "Lipschitz-free spaces are strongly unique preduals",
+      "title_zh": "Lipschitz 自由空间是强唯一预对偶",
+      "expected_report_link": "https://arxiv.org/abs/2609.24392v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for an arbitrary-metric-space resolution of the strongly unique predual question.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-21T05:36:35-05:00"
+    },
+    {
+      "candidate_id": "2609.31089",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 7,
+      "title_en": "On the transcendental Yau-Tian-Donaldson Conjecture",
+      "title_zh": "论超越型 Yau–Tian–Donaldson 猜想",
+      "expected_report_link": "https://arxiv.org/abs/2609.31089v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for extending the stability/existence correspondence to transcendental Kähler classes with the automorphism restriction.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T05:27:06-05:00"
+    },
+    {
+      "candidate_id": "2609.30895",
+      "list": "general",
+      "status": "selected-general",
+      "rank": 8,
+      "title_en": "Proof of the Kahn Saks Conjecture",
+      "title_zh": "Kahn–Saks 猜想的证明",
+      "expected_report_link": "https://arxiv.org/abs/2609.30895v1",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 4,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected for a full large-width poset conjecture and its stronger structural dichotomy.",
+      "event_type": "new preprint (v1)",
+      "event_at": "2026-09-25T02:04:00-05:00"
+    },
+    {
+      "candidate_id": "2609.24779",
+      "list": "ai_math",
+      "status": "selected-ai-math",
+      "rank": 1,
+      "title_en": "Notes on a strongly aperiodic monotile in $E^3$",
+      "title_zh": "$E^3$ 中强非周期单瓷砖的札记",
+      "expected_report_link": "https://www.quantamagazine.org/update/167384/",
+      "scores": {
+        "relevance": 5,
+        "importance": 4,
+        "novelty": 3,
+        "timeliness": 5,
+        "source_reliability": 4,
+        "research_interest": 4,
+        "confidence": 4
+      },
+      "selection_rationale": "Selected AI item because the in-week specialist reconstruction materially improves verification of an AI-discovered object and has reputable September 23 Quanta coverage.",
+      "event_type": "new specialist exposition and material verification update (v1); independent coverage 2026-09-23",
+      "event_at": "2026-09-21T10:43:49-05:00"
+    }
+  ],
+  "outputs": {
+    "english_report": "latest-week.md",
+    "chinese_report": "latest-week-zh.md",
+    "english_archive": "archive/2026Week39.md",
+    "chinese_archive": "archive/2026Week39-zh.md",
+    "knowledge_base": "knowledge-base/2026Week39.md"
+  },
+  "validation": {
+    "status": "success",
+    "checks": {
+      "all_plausible_candidates_recorded": {
+        "status": "success",
+        "detail": "All 64 normalized plausible candidates have unique stable IDs and KB records."
+      },
+      "knowledge_base_required_fields": {
+        "status": "success",
+        "detail": "All 19 required fields present for every candidate."
+      },
+      "candidate_assessment_complete": {
+        "status": "success",
+        "detail": "Every candidate has allowed status, credibility, seven scores and a recorded rationale."
+      },
+      "selection_caps_and_unique_ids": {
+        "status": "success",
+        "detail": "29 distinct selections: HA 20/20, general 8/8, AI 1/3; no low-credibility or pending selection."
+      },
+      "knowledge_base_json_mapping": {
+        "status": "success",
+        "detail": "All selected IDs agree on list, status, rank, canonical titles, destination, seven scores and rationale."
+      },
+      "selected_dates_in_window": {
+        "status": "success",
+        "detail": "Every selected primary event falls within September 21–27, America/Chicago."
+      },
+      "event_dates_match_primary_histories": {
+        "status": "success",
+        "detail": "All 29 selected timestamps match retrieved primary arXiv v1 histories, converted from UTC to CDT."
+      },
+      "en_selected_order": {
+        "status": "success",
+        "detail": "Selected candidate IDs and global list order match ranking_audit."
+      },
+      "en_detail_order": {
+        "status": "success",
+        "detail": "Detailed IDs are exactly HA ranks 1–6, general 1–3 and AI 1, in rank order."
+      },
+      "en_index_titles_ranks_urls_bold": {
+        "status": "success",
+        "detail": "Every index line exactly matches ranked canonical title, URL, rank and required bold position."
+      },
+      "en_detail_titles_authors": {
+        "status": "success",
+        "detail": "Detailed headings use canonical translated titles and rank; author names are preserved."
+      },
+      "en_ha_overviews": {
+        "status": "success",
+        "detail": "20 substantive HA overviews with sentence counts [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]"
+      },
+      "en_details_substantially_fuller": {
+        "status": "success",
+        "detail": "All six HA detailed texts are more than twice the corresponding overview length."
+      },
+      "en_general_ai_indexes_links_only": {
+        "status": "success",
+        "detail": "General and AI ranked sections contain numbered title links only."
+      },
+      "zh_selected_order": {
+        "status": "success",
+        "detail": "Selected candidate IDs and global list order match ranking_audit."
+      },
+      "zh_detail_order": {
+        "status": "success",
+        "detail": "Detailed IDs are exactly HA ranks 1–6, general 1–3 and AI 1, in rank order."
+      },
+      "zh_index_titles_ranks_urls_bold": {
+        "status": "success",
+        "detail": "Every index line exactly matches ranked canonical title, URL, rank and required bold position."
+      },
+      "zh_detail_titles_authors": {
+        "status": "success",
+        "detail": "Detailed headings use canonical translated titles and rank; author names are preserved."
+      },
+      "zh_ha_overviews": {
+        "status": "success",
+        "detail": "20 substantive HA overviews with sentence counts [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]"
+      },
+      "zh_details_substantially_fuller": {
+        "status": "success",
+        "detail": "All six HA detailed texts are more than twice the corresponding overview length."
+      },
+      "zh_general_ai_indexes_links_only": {
+        "status": "success",
+        "detail": "General and AI ranked sections contain numbered title links only."
+      },
+      "bilingual_urls_identical": {
+        "status": "success",
+        "detail": "All 45 link occurrences have identical URL and order across languages."
+      },
+      "bilingual_formulas_by_candidate": {
+        "status": "success",
+        "detail": "Formula multisets match within each overview/index and detail; natural-language ordering may differ."
+      },
+      "chinese_titles_translated": {
+        "status": "success",
+        "detail": "All 29 Chinese titles contain translated Chinese; canonical technical titles retained, no news headline substitution."
+      },
+      "ai_link_and_technical_evidence": {
+        "status": "success",
+        "detail": "AI index points to the September 23 Quanta report; the detail links the September 21 primary reconstruction and distinguishes original discovery from update."
+      },
+      "all_report_links_reachable": {
+        "status": "success",
+        "detail": "All 35 distinct URLs returned HTTP 200 following redirects; Quanta update resolves to its permanent article anchor."
+      },
+      "archives_current_iso_week": {
+        "status": "success",
+        "detail": "2026Week39 English and Chinese archives are byte-identical to finalized reports."
+      },
+      "prior_latest_archived": {
+        "status": "success",
+        "detail": "Both Week 34 latest reports matched their existing archives before replacement; historical archives remain untouched."
+      },
+      "model_metadata": {
+        "status": "success",
+        "detail": "No Model field was supplied; requested and separately exposed runtime model recorded as unavailable and warned in both logs."
+      },
+      "only_allowed_issue_artifacts_changed": {
+        "status": "success",
+        "detail": "Exactly the seven permitted issue artifacts changed."
+      },
+      "human_history_append_only": {
+        "status": "success",
+        "detail": "Existing human run history remains an unchanged prefix."
+      },
+      "secret_scan": {
+        "status": "success",
+        "detail": "No private-key headers or recognized AWS/GitHub/API token patterns found; source text and outputs manually reviewed for secrets."
+      },
+      "git_diff_whitespace": {
+        "status": "success",
+        "detail": "git diff --check passed."
+      }
+    },
+    "link_checks": [
+      {
+        "requested_url": "https://arxiv.org/abs/2609.28311v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.28311v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.27023v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.27023v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.24135v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.24135v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.32421v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.32421v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.32090v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.32090v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.25401v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.25401v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.29882v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.29882v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.27045v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.27045v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.33949v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.33949v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.32919v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.32919v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.30228v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.30228v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.31493v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.31493v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.28088v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.28088v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.30961v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.30961v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.31334v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.31334v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.33560v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.33560v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.28332v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.28332v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.29301v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.29301v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.24930v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.24930v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.33557v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.33557v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.30194v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.30194v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.32651v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.32651v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.24184v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.24184v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.25462v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.25462v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.30921v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.30921v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.24392v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.24392v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.31089v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.31089v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.30895v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.30895v1"
+      },
+      {
+        "requested_url": "https://www.quantamagazine.org/update/167384/",
+        "http_status": 200,
+        "effective_url": "https://www.quantamagazine.org/updates/transformation/#167384"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.21680v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.21680v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.24931v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.24931v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.31797v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.31797v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.24779v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.24779v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.19214v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.19214v1"
+      },
+      {
+        "requested_url": "https://arxiv.org/abs/2609.23783v1",
+        "http_status": 200,
+        "effective_url": "https://arxiv.org/abs/2609.23783v1"
+      }
+    ]
+  },
+  "warnings": [
+    "No nonempty Model: field was supplied; requested model is unavailable. No exact runtime model identifier is exposed.",
+    "Most selected mathematical items are unrefereed preprints; high source credibility means traceable primary evidence, not proof certification.",
+    "The arXiv census and targeted revision query do not constitute an exhaustive census of journals, talks, or all intermediate revisions; web discovery had partial publisher access.",
+    "Version-specific corrections for 2609.27023 and 2609.29301 are recorded in the knowledge base; later metadata was excluded when outside the window.",
+    "AI-assisted provenance is reported from interested authors and human reconstruction; no AI proof or Lean certificate was independently rebuilt in this run."
+  ],
+  "errors": [],
+  "git": {
+    "branch": "main",
+    "base_commit": "87b70bd869d9ebc712ea0b072bacaa8d1ff6564a",
+    "commit_message": "report: generate HANews 2026 Week 39 [run:2026-10-02T115622-0500-52ea32]",
+    "push": {
+      "status": "pending"
+    },
+    "push_outcome": "pending",
+    "publication_status": "pending"
+  },
+  "status": "success",
+  "report_generated_at": "2026-10-02T12:18:02-05:00"
+}
