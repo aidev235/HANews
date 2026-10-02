@@ -44,8 +44,9 @@ ranking, links, mathematical claims, and uncertainty statements.
 
 Unless the request specifies otherwise, a run covers the most recently completed ISO week
 (Monday through Sunday) in `America/Chicago`. Quotas are maxima: up to 20 harmonic-analysis
-items, 8 general-mathematics items, and 3 AI-in-mathematics news stories, with detailed briefings
-for at most 5, 3, and 3.
+items, 8 general-mathematics items, and 3 AI-in-mathematics news stories. Every selected
+harmonic-analysis item receives a concise overview, while the top 6 receive a substantially more
+detailed analysis; general-mathematics and AI-in-mathematics briefings cover at most 3 items each.
 
 ## History
 
