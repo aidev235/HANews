@@ -4,7 +4,7 @@
   "project": "HANews",
   "started_at": "2026-10-02T11:56:22-05:00",
   "finished_at": "2026-10-02T16:02:04-05:00",
-  "published_at": null,
+  "published_at": "2026-10-02T16:02:52-05:00",
   "timezone": "America/Chicago",
   "reporting_window": {
     "start": "2026-09-21",
@@ -1032,7 +1032,8 @@
     "Most selected mathematical items are unrefereed preprints; high source credibility means traceable primary evidence, not proof certification.",
     "The arXiv census and targeted revision query do not constitute an exhaustive census of journals, talks, or all intermediate revisions; web discovery had partial publisher access.",
     "Version-specific corrections for 2609.27023 and 2609.29301 are recorded in the knowledge base; later metadata was excluded when outside the window.",
-    "AI-assisted provenance is reported from interested authors and human reconstruction; no AI proof or Lean certificate was independently rebuilt in this run."
+    "AI-assisted provenance is reported from interested authors and human reconstruction; no AI proof or Lean certificate was independently rebuilt in this run.",
+    "The local branch contained a pre-existing README.md update commit; it was already an ancestor of the report commit and was pushed together with the authorized current-branch publication."
   ],
   "errors": [],
   "git": {
@@ -1040,11 +1041,28 @@
     "base_commit": "87b70bd869d9ebc712ea0b072bacaa8d1ff6564a",
     "commit_message": "report: generate HANews 2026 Week 39 [run:2026-10-02T115622-0500-52ea32]",
     "push": {
-      "status": "pending"
+      "status": "success",
+      "remote": "origin",
+      "branch": "main",
+      "outcome": "success main->main"
     },
-    "push_outcome": "pending",
-    "publication_status": "pending"
+    "push_outcome": "success main->main",
+    "publication_status": "success",
+    "report_commit": "0fbf5673a450f7945105a550c15765d5a8dbbf1b",
+    "remote": "origin",
+    "remote_before": "d53214dc1790331f7e1d25cf56925476746f9b96",
+    "remote_after": "0fbf5673a450f7945105a550c15765d5a8dbbf1b"
   },
   "status": "success",
-  "report_generated_at": "2026-10-02T12:18:02-05:00"
+  "report_generated_at": "2026-10-02T12:18:02-05:00",
+  "publication": {
+    "attempted_at": "2026-10-02T16:02:52-05:00",
+    "status": "success",
+    "remote": "origin",
+    "branch": "main",
+    "report_commit": "0fbf5673a450f7945105a550c15765d5a8dbbf1b",
+    "remote_before": "d53214dc1790331f7e1d25cf56925476746f9b96",
+    "remote_after": "0fbf5673a450f7945105a550c15765d5a8dbbf1b",
+    "outcome": "success main->main"
+  }
 }
